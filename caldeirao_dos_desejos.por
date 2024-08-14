@@ -24,8 +24,14 @@ programa
 			caso 's':
 				login() //função login
 			pare
+			caso 'S':
+				login() //função login
+			pare
 			//caso o usuário informe a opcao NÃO
 			caso 'n':
+			escreva("Volte sempre que desejar!\n")
+			pare
+			caso 'N':
 			escreva("Volte sempre que desejar!\n")
 			pare
 			//caso o usuário não informe alguma opção válida
@@ -50,11 +56,20 @@ programa
 					escreva("Entrando na conta\n")
 					u.aguarde(1000)
 				pare
+				caso 'S':
+					escreva("Entrando na conta\n")
+					u.aguarde(1000)
+				pare
 				caso 'n':
 					escreva("Usuário desconectado ")
 				pare
+				caso 'N':
+					escreva("Usuário desconectado ")
+				pare
 				caso contrario:
-					escreva("ERROR 404") 
+					escreva("ERROR 404\n") 
+					limpa()
+					menuLogin()
 				pare
 			}
 			escreva("Carregando")
@@ -93,8 +108,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1587; 
- * @DOBRAMENTO-CODIGO = [82, 85];
+ * @POSICAO-CURSOR = 1606; 
+ * @DOBRAMENTO-CODIGO = [97, 100];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
