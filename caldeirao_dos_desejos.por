@@ -10,8 +10,8 @@ programa
 	
 	funcao inicio()
 	{
-		
-		
+		menuLogin()
+		login()
 	}
 
 	funcao menuLogin(){
@@ -78,7 +78,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1497; 
+ * @POSICAO-CURSOR = 330; 
  * @DOBRAMENTO-CODIGO = [16, 39, 67, 70];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
