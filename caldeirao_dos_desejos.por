@@ -4,14 +4,13 @@ programa
 	inclua biblioteca Texto
 	inclua biblioteca Util-->u
 	
-	caracter opcaoLogin
+	caracter opcaoLogin, opcaoSair
 	cadeia usuario[5] = {"Ana","Gabriel","Lucas","Renata","Diogo"}, senha[5]={"12345","12345","12345","12345","12345"}, digitarUsuario, digitarSenha
 	logico valida1 = falso
 	
 	funcao inicio()
 	{
 		menuLogin()
-		login()
 	}
 
 	funcao menuLogin(){
@@ -37,24 +36,40 @@ programa
 			menuLogin()
 		}
 	}	
-	funcao login(){
+	funcao login(){ // check
 			escreva("Preencha seus dados:\n\nDigite o nome de usuário: ")
 			leia(digitarUsuario)
 			escreva("Digite a senha: ")
 			leia(digitarSenha)
 			limpa()
+			escreva("Deseja efetuar o login? \n [S] \n [N] \n Escreva:")
+			leia(opcaoSair)
+			limpa()
+			escolha(opcaoSair) { // check
+				caso 's':
+					escreva("Entrando na conta\n")
+					u.aguarde(1000)
+				pare
+				caso 'n':
+					escreva("Usuário desconectado ")
+				pare
+				caso contrario:
+					escreva("ERROR 404") 
+				pare
+			}
 			escreva("Carregando")
 			para(inteiro i=0; i<3; i++) {
 			escreva(".")
 			u.aguarde(700)
 			}
 			limpa()
-				para(inteiro i=0;i<4;i++){
+				para(inteiro i=0;i<5;i++){
 					se(digitarUsuario == usuario[i] e digitarSenha == senha[i]){
 						valida1 = verdadeiro
 					}
 				}
-			se(valida1){
+				
+			se(valida1 == verdadeiro){
 				escreva("Login bem sucedido.\n")
 			}senao{
 				enquanto(valida1 == falso){
@@ -78,8 +93,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 330; 
- * @DOBRAMENTO-CODIGO = [16, 39, 67, 70];
+ * @POSICAO-CURSOR = 1587; 
+ * @DOBRAMENTO-CODIGO = [82, 85];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
