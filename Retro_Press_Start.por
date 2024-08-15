@@ -119,19 +119,17 @@ programa
 			}
 	}
 	funcao menuCategorias(){
+	escreva(nomeUsuario,", Aqui estão algumas opções de Catálogo de Games!")
+	u.aguarde(1500)
+	limpa()
 
-		
-		escreva(nomeUsuario,", Aqui estão algumas opções de Catálogo de Games!")
-		u.aguarde(1500)
-		limpa()
-
-		escreva("Temos dois catálogos de Games:\n\n")
-		escreva("[1] - Jogos para Nintendo\n[2] - Jogos de Playstation 1\n[3] - Sair\n\n")
-		escreva("Utilize a 3º opção, caso queira sair deste menu!\n\n")
-		escreva("Escreva: ")
-		leia(escolhaCatalogo)
-		u.aguarde(1000)
-		limpa()
+	escreva("Temos dois catálogos de Games:\n\n")
+	escreva("[1] - Jogos para Nintendo\n[2] - Jogos de Playstation 1\n[3] - Sair\n\n")
+	escreva("Utilize a 3º opção, caso queira sair deste menu!\n\n")
+	escreva("Escreva: ")
+	leia(escolhaCatalogo)
+	u.aguarde(1000)
+	limpa()
 
 		escolha(escolhaCatalogo)
 		{
@@ -140,19 +138,19 @@ programa
 			escreva("Ótima pedida! Segue nosso catalogo de jogos Nintendo:\n\n")
 			
 			para(inteiro i = 0; i < 4; i++)
-			{
-            	escreva(matrizCatalogoNintendo[i][0],"º - ","ID",": ", matrizCatalogoNintendo[i][1]," ",matrizCatalogoNintendo[i][2]," ",matrizCatalogoNintendo[i][3],"\n")
-			}
+				{
+            		escreva(matrizCatalogoNintendo[i][0],"º - ","ID",": ", matrizCatalogoNintendo[i][1]," ",matrizCatalogoNintendo[i][2]," ",matrizCatalogoNintendo[i][3],"\n")
+				}
 			pare
 	
 			caso '2':
 			
 			escreva("Ótima pedida! Segue nosso catalogo de jogos Playstation:\n\n")
 			
-			para(inteiro i = 0; i < 4; i++)
-			{
-            	escreva(matrizCatalogoPlaystation[i][0],"º - ","ID",": ", matrizCatalogoPlaystation[i][1]," ",matrizCatalogoPlaystation[i][2]," ",matrizCatalogoNintendo[i][3],"\n")
-			}
+				para(inteiro i = 0; i < 4; i++)
+				{
+            		escreva(matrizCatalogoPlaystation[i][0],"º - ","ID",": ", matrizCatalogoPlaystation[i][1]," ",matrizCatalogoPlaystation[i][2]," ",matrizCatalogoNintendo[i][3],"\n")
+				}
 			pare
 
 			caso '3':
@@ -160,25 +158,25 @@ programa
 			inteiro contadorLoading = 3
 			escreva("Carregando ações")
 			
-			para(inteiro i = 0; i<contadorLoading;i++)
-			{
-				escreva(".")
-				u.aguarde(500)
-			}
+				para(inteiro i = 0; i<contadorLoading;i++)
+				{
+					escreva(".")
+					u.aguarde(500)
+				}
 			u.aguarde(200)
 			limpa()
 			escreva("Obrigado por ter visitado nossa loja! Ate mais.")
 			u.aguarde(2000)
 			limpa()	
-			login()
+			menuLogin()
 			
 			pare
 			caso contrario:
 			
-				escreva("\tOpção incorreta! Tente novamente!\n\n\t\tOpções possíveis:\n\n[1] Games Nintendo\t[2] Games Playstation\t[3] Sair")
-				u.aguarde(2500)
-				limpa()
-				menuCategorias()
+			escreva("\tOpção incorreta! Tente novamente!\n\n\t\tOpções possíveis:\n\n[1] Games Nintendo\t[2] Games Playstation\t[3] Sair")
+			u.aguarde(2500)
+			limpa()
+			menuCategorias()
 				
 			pare
 		}
@@ -193,7 +191,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2876; 
+ * @POSICAO-CURSOR = 3634; 
+ * @DOBRAMENTO-CODIGO = [30, 59, 183];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {usuario, 8, 8, 7};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
