@@ -30,7 +30,7 @@ programa
 		menuLogin()
 	}
 	funcao menuLogin(){
-		escreva("\t     ¦─ ⚄ Olá, seja bem vindo(a) a Retro Games! ♞ ─¦\n")
+		escreva("\t     ¦─ ⚄ Olá, seja bem vindo(a) à Press Start! ♞ ─¦\n")
 		escreva("\n\t\t\t Deseja entrar na loja?\n\n[S] - Sim\n[N] - Não\n\nEscreva: ")
 		leia(opcaoLogin)
 		limpa()
@@ -52,17 +52,18 @@ programa
 			pare
 			//caso o usuário não informe alguma opção válida
 			caso contrario: 
-			escreva("GAME OVER.\n")
+			escreva("ERROR.\n")
+			escreva("Try again!.\n")
 			u.aguarde(2000)
 			limpa()
 			menuLogin()
 		}
 	}	
-	funcao login(){ // check
-			escreva("\t Opa, maravilha! Então vamos lá!\n\t ⇩ Preencha seus dados abaixo ⇩ \n\nComo podemos te chamar caro gamer? ")
+	funcao login(){ 
+			escreva("\t Opa, maravilha! Então vamos lá!\n\t ⇩ Preencha seus dados abaixo ⇩ \n\nComo podemos te chamar, caro gamer? ")
 			leia(nomeUsuario)
 			limpa()
-			escreva(nomeUsuario," informe o nome de usuário: ")
+			escreva(nomeUsuario,", informe o nome de usuário: ")
 			leia(digitarUsuario)
 			escreva("Informe a senha: ")
 			leia(digitarSenha)
@@ -80,13 +81,21 @@ programa
 					u.aguarde(1000)
 				pare
 				caso 'n':
-					escreva("Usuário desconectado ")
+					escreva("Usuário desconectado!\n")
+					u.aguarde(3000)
+					limpa()
+					menuLogin()
 				pare
 				caso 'N':
-					escreva("Usuário desconectado ")
+					escreva("Usuário desconectado!\n")
+					u.aguarde(3000)
+					limpa()
+					menuLogin()
 				pare
 				caso contrario:
-					escreva("ERROR 404\n") 
+					escreva("ERROR\n")
+					escreva("Try again!\n")
+					u.aguarde(3000) 
 					limpa()
 					menuLogin()
 				pare
@@ -105,23 +114,22 @@ programa
 				
 			se(valida1 == verdadeiro){
 				escreva("Login bem sucedido.\n")
-				limpa()
-				escreva(nomeUsuario, ", Bem vindo a Retro Gamer")
-				u.aguarde(1500)
+				escreva("Olá ", nomeUsuario, ", vamos conhecer universos e embarcar em novas aventuras!")
+				u.aguarde(3000)
 				limpa()
 				menuCategorias()
 			}senao{
 				enquanto(valida1 == falso){
-				escreva("Usuário ou senha incorretos.\nTente novamente.")
-				u.aguarde(2000)
+				escreva("Usuário ou senha incorretos.\nFique conosco para tentar novamente!\n")
+				u.aguarde(3000)
 				limpa()
 				login()
 				}
 			}
 	}
 	funcao menuCategorias(){
-	escreva(nomeUsuario,", Aqui estão algumas opções de Catálogo de Games!")
-	u.aguarde(1500)
+	escreva(nomeUsuario,", aqui estão os universos disponíveis no nosso catálogo!")
+	u.aguarde(3000)
 	limpa()
 
 	escreva("Temos dois catálogos de Games:\n\n")
@@ -136,7 +144,7 @@ programa
 		{
 			caso '1':
 			
-			escreva("Ótima pedida! Segue nosso catalogo de jogos Nintendo:\n\n")
+			escreva("Ótima pedida! Segue nosso catálogo de universos Nintendo:\n\n")
 			
 				para(inteiro i = 0; i < 4; i++)
 					{
@@ -148,7 +156,7 @@ programa
 	
 			caso '2':
 			
-			escreva("Ótima pedida! Segue nosso catalogo de jogos Playstation:\n\n")
+			escreva("Ótima pedida! Segue nosso catálogo de universos Playstation:\n\n")
 			
 				para(inteiro i = 0; i < 4; i++)
 				{
@@ -161,7 +169,7 @@ programa
 			caso '3':
 			
 			inteiro contadorLoading = 3
-			escreva("Carregando ações")
+			escreva("Carregando")
 			
 				para(inteiro i = 0; i<contadorLoading;i++)
 				{
@@ -170,7 +178,7 @@ programa
 				}
 			u.aguarde(200)
 			limpa()
-			escreva("Obrigado por ter visitado nossa loja! Ate mais.")
+			escreva("Obrigado por ter visitado nossa loja! Até mais!")
 			u.aguarde(2000)
 			limpa()	
 			menuLogin()
@@ -179,7 +187,7 @@ programa
 			caso contrario:
 			
 			escreva("\tOpção incorreta! Tente novamente!\n\n\t\tOpções possíveis:\n\n[1] Games Nintendo\t[2] Games Playstation\t[3] Sair")
-			u.aguarde(2500)
+			u.aguarde(3000)
 			limpa()
 			menuCategorias()
 				
@@ -211,67 +219,68 @@ programa
  	
 	escreva("Entrando em um novo mundo ")
 	aguarde()
+	limpa()
 
 	escolha(opcao){
-	caso 1:
-		
-		//Imagem
-		
-		musica("Mario.mp3")
-		escreva("\nBem vindo ao universo do Mario Bros!")
-		escreva("\n")
-		escreva("\n✩ Descrição: Acompanhe o encanador Mario Bros em sua jornada para resgatar a princesa Peach. Mas cuidado! O Browser está à espreita e pode atrapalhar essa aventura!") 
-		escreva("\n")
-		escreva("\n")
-		escreva("Para embarcar junto com o Mario, você só precisará de 20 coins. Mas corra! Temos apenas 2 ingressos no nosso estoque!")
-		escreva("\n")
-		carrinho()	
-	pare
-	caso 2:
-
-		//Imagem
-
-		musica("Zelda.mp3")
-		escreva("\nBem vindo ao universo de Zelda!")
-		escreva("\n")
-		escreva("\n☡ Descrição: Junte-se a Link, o destemido herói, para desbravar reinos encantados, enfrentar monstros e desvendar enigmas para salvar a princesa Zelda e restaurar a paz em Hyrule.") 
-		escreva("\n")
-		escreva("\n")
-		escreva("Para embarcar junto a Zelda, você só precisará de 18 coins. Mas corra! Temos apenas 5 ingressos no nosso estoque!")
-		escreva("\n")
-		carrinho()
-		
-	pare
-	caso 3:
-
-		//Imagem
-
-		musica("DonkeyKong.mp3")
-		escreva("\nBem vindo ao universo de Donkey Kong!")
-		escreva("\n")
-		escreva("\nⒹⓀ Descrição: Junte-se a Donkey Kong, enfrente obstáculos e inimigos e o ajude a resgatar sua amada, enfrentando plataformas, rochas e barris pelo caminho. Prepare-se para um jogo repleto de ação, pulos e diversão!") 
-		escreva("\n")
-		escreva("\n")
-		escreva("Para embarcar junto de Donkey Kong, você só precisará de 10 coins. Mas corra! Temos apenas 7 ingressos no nosso estoque!")
-		escreva("\n")
-		carrinho()
-
-	pare
-	caso 4:
-
-		//Imagem
-
-		musica("Pacman.mp3")
-		escreva("\nBem vindo ao universo de Pac-man!")
-		escreva("\n")
-		escreva("\n⋯ Descrição: Junte-se a Pac-man em uma clássica corrida labiríntica para devorar pellets e frutas, enquanto foge de fantasmas famintos. Cuidado! Eles são rápidos!") 
-		escreva("\n")
-		escreva("\n")
-		escreva("Para embarcar junto de Pac-man, você só precisará de 12 coins. Mas corra! Temos apenas 9 ingressos no nosso estoque!")
-		escreva("\n")
-		carrinho()
-
-	pare
+		caso 1:
+			
+			//Imagem
+			
+			musica("Mario.mp3")
+			escreva("Bem vindo ao universo do Mario Bros!")
+			escreva("\n")
+			escreva("\n★ Descrição: Acompanhe o encanador Mario Bros em sua jornada para resgatar a princesa Peach. Mas cuidado! O Browser está à espreita e pode atrapalhar essa aventura!") 
+			escreva("\n")
+			escreva("\n")
+			escreva("Para embarcar junto com o Mario, você só precisará de 20 coins. Mas corra! Temos apenas 2 ingressos no nosso estoque!")
+			escreva("\n")
+			carrinho()	
+		pare
+		caso 2:
+	
+			//Imagem
+	
+			musica("Zelda.mp3")
+			escreva("Bem vindo ao universo de Zelda!")
+			escreva("\n")
+			escreva("\n☡ Descrição: Junte-se a Link, o destemido herói, para desbravar reinos encantados, enfrentar monstros e desvendar enigmas para salvar a princesa Zelda e restaurar a paz em Hyrule.") 
+			escreva("\n")
+			escreva("\n")
+			escreva("Para embarcar junto a Zelda, você só precisará de 18 coins. Mas corra! Temos apenas 5 ingressos no nosso estoque!")
+			escreva("\n")
+			carrinho()
+			
+		pare
+		caso 3:
+	
+			//Imagem
+	
+			musica("DonkeyKong.mp3")
+			escreva("Bem vindo ao universo de Donkey Kong!")
+			escreva("\n")
+			escreva("\nƊ Descrição: Junte-se a Donkey Kong, enfrente obstáculos e inimigos e o ajude a resgatar sua amada, enfrentando plataformas, rochas e barris pelo caminho. Prepare-se para um jogo repleto de ação, pulos e diversão!") 
+			escreva("\n")
+			escreva("\n")
+			escreva("Para embarcar junto de Donkey Kong, você só precisará de 10 coins. Mas corra! Temos apenas 7 ingressos no nosso estoque!")
+			escreva("\n")
+			carrinho()
+	
+		pare
+		caso 4:
+	
+			//Imagem
+	
+			musica("Pacman.mp3")
+			escreva("Bem vindo ao universo de Pac-man!")
+			escreva("\n")
+			escreva("\n⋯ Descrição: Junte-se a Pac-man em uma clássica corrida labiríntica para devorar pellets e frutas, enquanto foge de fantasmas famintos. Cuidado! Eles são rápidos!") 
+			escreva("\n")
+			escreva("\n")
+			escreva("Para embarcar junto de Pac-man, você só precisará de 12 coins. Mas corra! Temos apenas 9 ingressos no nosso estoque!")
+			escreva("\n")
+			carrinho()
+	
+		pare
 	}
 	}
 
@@ -300,65 +309,67 @@ programa
  	
 	escreva("Entrando em um novo mundo ")
 	aguarde()
-	escolha(opcao){
-	caso 5:
-
-		//Imagem
-
-		musica("ResidentEvil.mp3")
-		escreva("\nBem vindo ao universo de Resident Evil!")
-		escreva("\n")
-		escreva("\n☢ Descrição: mergulhe em uma noite de terror em Raccoon City, onde os zumbis e criaturas grotescas dominam. Junte-se a Leon e Claire enquanto desvendam mistérios, enfrentam horrores e lutam pela sobrevivência em uma batalha de pura tensão e adrenalina!") 
-		escreva("\n")
-		escreva("\n")
-		escreva("Para embarcar junto de Leon e Claire, você só precisará de 20 coins. Mas corra! Temos apenas 3 ingressos no nosso estoque!")
-		escreva("\n")
-		carrinho()
-
-	pare
-	caso 6:
-
-		//Imagem
-
-		musica("Aladdin.mp3")
-		escreva("\nBem vindo ao universo de Aladdin!")
-		escreva("\n")
-		escreva("\n♔ Descrição: voe em um tapete mágico e viva uma aventura encantada nas ruas de Agrabah. Com a ajuda de um gênio travesso e sua astúcia, enfrente vilões e descubra tesouros enquanto busca conquistar o coração da princesa e mudar seu destino.") 
-		escreva("\n")
-		escreva("\n")
-		escreva("Para embarcar junto de Aladdin, você só precisará de 15 coins. Mas corra! Temos apenas 6 ingressos no nosso estoque!")
-		escreva("\n")
-		carrinho()
+	limpa()
 	
-	pare
-	caso 7:
-
-		//Imagem
-
-		musica("Crash.mp3")
-		escreva("\nBem vindo ao universo de Crash!")
-		escreva("\n")
-		escreva("\nⒸ Descrição: Junte-se a Crash em uma jornada alucinante, cheia de saltos, corridas e explosões. Navegue por selvas, vulcões e labirintos, enquanto enfrenta vilões e coleta gemas para salvar o dia com estilo e muita diversão!") 
-		escreva("\n")
-		escreva("\n")
-		escreva("Para embarcar junto de Crash, você só precisará de 14 coins. Mas corra! Temos apenas 8 ingressos no nosso estoque!")
-		escreva("\n")
-		carrinho()
-	pare
-	caso 8:
-
-		//Imagem
-
-		musica("Castlevania.mp3")
-		escreva("\nBem vindo ao universo de Castlevania!")
-		escreva("\n")
-		escreva("\n♜ Descrição: enfrente as trevas em um castelo sinistro repleto de monstros e armadilhas. Armado com uma variedade de armas e coragem, derrote o Conde Drácula e seus seguidores, enquanto explora corredores góticos e desvenda segredos sombrios.") 
-		escreva("\n")
-		escreva("\n")
-		escreva("Para embarcar junto de Castlevania, você só precisará de 19 coins. Mas corra! Temos apenas 2 ingressos no nosso estoque!")
-		escreva("\n")
-		carrinho()	
-	pare
+	escolha(opcao){
+		caso 5:
+	
+			//Imagem
+	
+			musica("ResidentEvil.mp3")
+			escreva("Bem vindo ao universo de Resident Evil!")
+			escreva("\n")
+			escreva("\n☢ Descrição: mergulhe em uma noite de terror em Raccoon City, onde os zumbis e criaturas grotescas dominam. Junte-se a Leon e Claire enquanto desvendam mistérios, enfrentam horrores e lutam pela sobrevivência em uma batalha de pura tensão e adrenalina!") 
+			escreva("\n")
+			escreva("\n")
+			escreva("Para embarcar junto de Leon e Claire, você só precisará de 20 coins. Mas corra! Temos apenas 3 ingressos no nosso estoque!")
+			escreva("\n")
+			carrinho()
+	
+		pare
+		caso 6:
+	
+			//Imagem
+	
+			musica("Aladdin.mp3")
+			escreva("Bem vindo ao universo de Aladdin!")
+			escreva("\n")
+			escreva("\n♔ Descrição: voe em um tapete mágico e viva uma aventura encantada nas ruas de Agrabah. Com a ajuda de um gênio travesso e sua astúcia, enfrente vilões e descubra tesouros enquanto busca conquistar o coração da princesa e mudar seu destino.") 
+			escreva("\n")
+			escreva("\n")
+			escreva("Para embarcar junto de Aladdin, você só precisará de 15 coins. Mas corra! Temos apenas 6 ingressos no nosso estoque!")
+			escreva("\n")
+			carrinho()
+		
+		pare
+		caso 7:
+	
+			//Imagem
+	
+			musica("Crash.mp3")
+			escreva("Bem vindo ao universo de Crash!")
+			escreva("\n")
+			escreva("\n© Descrição: Junte-se a Crash em uma jornada alucinante, cheia de saltos, corridas e explosões. Navegue por selvas, vulcões e labirintos, enquanto enfrenta vilões e coleta gemas para salvar o dia com estilo e muita diversão!") 
+			escreva("\n")
+			escreva("\n")
+			escreva("Para embarcar junto de Crash, você só precisará de 14 coins. Mas corra! Temos apenas 8 ingressos no nosso estoque!")
+			escreva("\n")
+			carrinho()
+		pare
+		caso 8:
+	
+			//Imagem
+	
+			musica("Castlevania.mp3")
+			escreva("Bem vindo ao universo de Castlevania!")
+			escreva("\n")
+			escreva("\n♜ Descrição: enfrente as trevas em um castelo sinistro repleto de monstros e armadilhas. Armado com uma variedade de armas e coragem, derrote o Conde Drácula e seus seguidores, enquanto explora corredores góticos e desvenda segredos sombrios.") 
+			escreva("\n")
+			escreva("\n")
+			escreva("Para embarcar junto de Castlevania, você só precisará de 19 coins. Mas corra! Temos apenas 2 ingressos no nosso estoque!")
+			escreva("\n")
+			carrinho()	
+		pare
 	}
 	}
 	
@@ -380,8 +391,8 @@ programa
 	funcao musica(cadeia mp3){
 		
 		inteiro som = s.carregar_som(mp3)
-		s.reproduzir_som(som, falso)
-		u.aguarde(7000)
+		s.reproduzir_som(som, verdadeiro)
+		u.aguarde(10000)
 		s.interromper_som(som)
 	
 	}
@@ -397,7 +408,8 @@ programa
 			escreva("Ótimo! Nos vemos em breve!")
 		}senao se(opcaoCarrinho == 'N' ou opcaoCarrinho == 'n'){
 			escreva("Que pena! Então vamos visitar outros universos!\n")
-			u.aguarde(1000)
+			u.aguarde(3000)
+			limpa()
 			menuCategorias()
 		}senao{
 			escreva("Entrada inválida!")
@@ -414,10 +426,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 10363; 
- * @DOBRAMENTO-CODIGO = [31, 60];
+ * @POSICAO-CURSOR = 10161; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {usuario, 9, 8, 7};
+ * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
