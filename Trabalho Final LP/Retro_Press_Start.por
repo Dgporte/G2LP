@@ -11,14 +11,12 @@ programa
 	cadeia digitarUsuario, digitarSenha, nomeUsuario
 	logico valida1 = falso
 
-	cadeia matrizCatalogoNintendo[4][5] = 
+	cadeia matrizCatalogo[8][5] = 
       {{"1","Mario", "20", "Coins", "2"}, 
       {"2","Zelda", "18", "Coins", "5"}, 
       {"3","Donkey Kong", "10", "Coins", "7"}, 
-      {"4","Pac-man", "12", "Coins", "9"}}
-
-      cadeia matrizCatalogoPlaystation[4][5] = 
-      {{"5","Resident Evil 2", "20", "Coins", "3"}, 
+      {"4","Pac-man", "12", "Coins", "9"},
+      {"5","Resident Evil 2", "20", "Coins", "3"}, 
       {"6","Disney's Aladdin in Nasira's Revenge", "15", "Coins", "6"}, 
       {"7","Crash Bandicoot", "14", "Coins", "8"}, 
       {"8","Castlevania: Symphony of the Night", "19", "Coins", "2"}}
@@ -148,7 +146,7 @@ programa
 			
 				para(inteiro i = 0; i < 4; i++)
 					{
-	            		escreva(matrizCatalogoNintendo[i][0]," - ","ID",": ", matrizCatalogoNintendo[i][1]," ",matrizCatalogoNintendo[i][2]," ",matrizCatalogoNintendo[i][3],"\n")
+	            		escreva(matrizCatalogo[i][0]," - ","ID",": ", matrizCatalogo[i][1]," ",matrizCatalogo[i][2]," ",matrizCatalogo[i][3],"\n")
 					}
 					escreva("\n")
 					produtos1()
@@ -158,9 +156,9 @@ programa
 			
 			escreva("Ótima pedida! Segue nosso catálogo de universos Playstation:\n\n")
 			
-				para(inteiro i = 0; i < 4; i++)
+				para(inteiro i = 5; i < 8; i++)
 				{
-            		escreva(matrizCatalogoPlaystation[i][0]," - ","ID",": ", matrizCatalogoPlaystation[i][1]," ",matrizCatalogoPlaystation[i][2]," ",matrizCatalogoNintendo[i][3],"\n")
+            		escreva(matrizCatalogo[i][0]," - ","ID",": ", matrizCatalogo[i][1]," ",matrizCatalogo[i][2]," ",matrizCatalogo[i][3],"\n")
 				}
 				escreva("\n")
 				produtos2()
@@ -426,7 +424,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 10161; 
+ * @POSICAO-CURSOR = 4275; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
