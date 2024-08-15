@@ -5,16 +5,18 @@ programa
 	inclua biblioteca Util-->u
 	
 	caracter opcaoLogin, opcaoSair
-	cadeia usuario[5] = {"Ana","Gabriel","Lucas","Renata","Diogo"}, senha[5]={"12345","12345","12345","12345","12345"}, digitarUsuario, digitarSenha
+	cadeia usuario[5][2] = {{"Lucas","senhaLucas"},{"Ana","senhaAna"},{"Gabriel","senhaGabriel"},{"Renata","senhaRenata"},{"Diogo","senhaDiogo"}}
+	//cadeia usuario[5] = {"Ana","Gabriel","Lucas","Renata","Diogo"}, senha[5]={"12345","12345","12345","12345","12345"}, 
+	cadeia digitarUsuario, digitarSenha
 	logico valida1 = falso
 	
 	funcao inicio()
 	{
 		menuLogin()
 	}
-
 	funcao menuLogin(){
-		escreva("Deseja entrar na loja?\n[S] - Sim\n[N] - Não\nEscreva: ")
+		escreva("\t¦─ ⚄ Olá, seja bem vindo(a) a nossa loja de jogos! ♞ ─¦\n")
+		escreva("\n\t\t\t Deseja entrar na loja?\n\n[S] - Sim\n[N] - Não\n\nEscreva: ")
 		leia(opcaoLogin)
 		
 		limpa()
@@ -43,12 +45,12 @@ programa
 		}
 	}	
 	funcao login(){ // check
-			escreva("Preencha seus dados:\n\nDigite o nome de usuário: ")
+			escreva("\t Opa, maravilha! Então vamos lá!\n\t ⇩ Preencha seus dados abaixo ⇩ \n\nInforme o nome de usuário: ")
 			leia(digitarUsuario)
-			escreva("Digite a senha: ")
+			escreva("Informe a senha: ")
 			leia(digitarSenha)
 			limpa()
-			escreva("Deseja efetuar o login? \n [S] \n [N] \n Escreva:")
+			escreva("Deseja efetuar o login? \n[S] - Sim\n[N] - Não\nEscreva: ")
 			leia(opcaoSair)
 			limpa()
 			escolha(opcaoSair) { // check
@@ -79,7 +81,7 @@ programa
 			}
 			limpa()
 				para(inteiro i=0;i<5;i++){
-					se(digitarUsuario == usuario[i] e digitarSenha == senha[i]){
+					se(digitarUsuario == usuario[i][0] e digitarSenha == usuario[i][1]){
 						valida1 = verdadeiro
 					}
 				}
@@ -88,7 +90,7 @@ programa
 				escreva("Login bem sucedido.\n")
 			}senao{
 				enquanto(valida1 == falso){
-				escreva("Usuário ou senha incorretos.\n")
+				escreva("Usuário ou senha incorretos.\nTente novamente.")
 				u.aguarde(2000)
 				limpa()
 				login()
@@ -108,10 +110,10 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1606; 
- * @DOBRAMENTO-CODIGO = [97, 100];
+ * @POSICAO-CURSOR = 1764; 
+ * @DOBRAMENTO-CODIGO = [12, 16, 99, 102];
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
+ * @SIMBOLOS-INSPECIONADOS = {usuario, 8, 8, 7};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
