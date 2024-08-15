@@ -1,7 +1,7 @@
 programa
 {
-	inclua biblioteca Tipos
-	inclua biblioteca Texto
+	inclua biblioteca Tipos--> tp
+	inclua biblioteca Texto--> t
 	inclua biblioteca Util--> u
 	inclua biblioteca Sons --> s
 	
@@ -149,7 +149,14 @@ programa
 	            		escreva(matrizCatalogo[i][0]," - ","ID",": ", matrizCatalogo[i][1]," ",matrizCatalogo[i][2]," ",matrizCatalogo[i][3],"\n")
 					}
 					escreva("\n")
-					produtos1()
+					cadeia resposta
+					escreva("Voce realmente gostou desses universos?\n\n[S] Sim e \n[N]\n\nEscreva: ")
+					leia(resposta)
+					cadeia resposta_alta = t.caixa_alta(resposta)
+						se(resposta_alta !="S")
+						{
+						produtos1()
+						}
 				pare
 	
 			caso '2':
@@ -424,7 +431,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 4275; 
+ * @POSICAO-CURSOR = 39; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
