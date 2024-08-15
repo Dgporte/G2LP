@@ -2,7 +2,8 @@ programa
 {
 	inclua biblioteca Tipos
 	inclua biblioteca Texto
-	inclua biblioteca Util-->u
+	inclua biblioteca Util--> u
+	inclua biblioteca Sons --> s
 	
 	caracter opcaoLogin, opcaoSair
 	cadeia usuario[5][2] = {{"lucas@email.com","12345"},{"ana@email.com","12345"},{"gabriel@email.com","12345"},{"renata@email.com","12345"},{"diogo@email.com","12345"}}
@@ -137,11 +138,13 @@ programa
 			
 			escreva("Ótima pedida! Segue nosso catalogo de jogos Nintendo:\n\n")
 			
-			para(inteiro i = 0; i < 4; i++)
-				{
-            		escreva(matrizCatalogoNintendo[i][0],"º - ","ID",": ", matrizCatalogoNintendo[i][1]," ",matrizCatalogoNintendo[i][2]," ",matrizCatalogoNintendo[i][3],"\n")
-				}
-			pare
+				para(inteiro i = 0; i < 4; i++)
+					{
+	            		escreva(matrizCatalogoNintendo[i][0]," - ","ID",": ", matrizCatalogoNintendo[i][1]," ",matrizCatalogoNintendo[i][2]," ",matrizCatalogoNintendo[i][3],"\n")
+					}
+					escreva("\n")
+					produtos1()
+				pare
 	
 			caso '2':
 			
@@ -149,8 +152,10 @@ programa
 			
 				para(inteiro i = 0; i < 4; i++)
 				{
-            		escreva(matrizCatalogoPlaystation[i][0],"º - ","ID",": ", matrizCatalogoPlaystation[i][1]," ",matrizCatalogoPlaystation[i][2]," ",matrizCatalogoNintendo[i][3],"\n")
+            		escreva(matrizCatalogoPlaystation[i][0]," - ","ID",": ", matrizCatalogoPlaystation[i][1]," ",matrizCatalogoPlaystation[i][2]," ",matrizCatalogoNintendo[i][3],"\n")
 				}
+				escreva("\n")
+				produtos2()
 			pare
 
 			caso '3':
@@ -181,9 +186,227 @@ programa
 			pare
 		}
 	}
-	funcao menuProdutos(){
+	funcao produtos1(){
+	inteiro opcao = 0
+	logico validacao = falso
 		
+
+	enquanto(validacao == falso){
+		escreva("Em qual universo deseja embarcar? ")
+		leia(opcao)
+		se(opcao >= 1 e opcao <= 4){
+			escreva("Muito bem, você escolheu o seu destino!\n")
+			escreva("Vamos mergulhar nessa aventura!")
+			validacao = verdadeiro
+		}senao{
+			escreva("Você escolheu um universo ainda desconhecido!\n")
+			escreva("Que tal mergulharmos em uma das aventuras disponíveis?")
+			u.aguarde(5000)
+			limpa()
+		}	
 	}
+
+ 	u.aguarde(3000)
+ 	limpa()
+ 	
+	escreva("Entrando em um novo mundo ")
+	aguarde()
+
+	escolha(opcao){
+	caso 1:
+		
+		//Imagem
+		
+		musica("Mario.mp3")
+		escreva("\nBem vindo ao universo do Mario Bros!")
+		escreva("\n")
+		escreva("\n✩ Descrição: Acompanhe o encanador Mario Bros em sua jornada para resgatar a princesa Peach. Mas cuidado! O Browser está à espreita e pode atrapalhar essa aventura!") 
+		escreva("\n")
+		escreva("\n")
+		escreva("Para embarcar junto com o Mario, você só precisará de 20 coins. Mas corra! Temos apenas 2 ingressos no nosso estoque!")
+		escreva("\n")
+		carrinho()	
+	pare
+	caso 2:
+
+		//Imagem
+
+		musica("Zelda.mp3")
+		escreva("\nBem vindo ao universo de Zelda!")
+		escreva("\n")
+		escreva("\n☡ Descrição: Junte-se a Link, o destemido herói, para desbravar reinos encantados, enfrentar monstros e desvendar enigmas para salvar a princesa Zelda e restaurar a paz em Hyrule.") 
+		escreva("\n")
+		escreva("\n")
+		escreva("Para embarcar junto a Zelda, você só precisará de 18 coins. Mas corra! Temos apenas 5 ingressos no nosso estoque!")
+		escreva("\n")
+		carrinho()
+		
+	pare
+	caso 3:
+
+		//Imagem
+
+		musica("DonkeyKong.mp3")
+		escreva("\nBem vindo ao universo de Donkey Kong!")
+		escreva("\n")
+		escreva("\nⒹⓀ Descrição: Junte-se a Donkey Kong, enfrente obstáculos e inimigos e o ajude a resgatar sua amada, enfrentando plataformas, rochas e barris pelo caminho. Prepare-se para um jogo repleto de ação, pulos e diversão!") 
+		escreva("\n")
+		escreva("\n")
+		escreva("Para embarcar junto de Donkey Kong, você só precisará de 10 coins. Mas corra! Temos apenas 7 ingressos no nosso estoque!")
+		escreva("\n")
+		carrinho()
+
+	pare
+	caso 4:
+
+		//Imagem
+
+		musica("Pacman.mp3")
+		escreva("\nBem vindo ao universo de Pac-man!")
+		escreva("\n")
+		escreva("\n⋯ Descrição: Junte-se a Pac-man em uma clássica corrida labiríntica para devorar pellets e frutas, enquanto foge de fantasmas famintos. Cuidado! Eles são rápidos!") 
+		escreva("\n")
+		escreva("\n")
+		escreva("Para embarcar junto de Pac-man, você só precisará de 12 coins. Mas corra! Temos apenas 9 ingressos no nosso estoque!")
+		escreva("\n")
+		carrinho()
+
+	pare
+	}
+	}
+
+	funcao produtos2(){
+	inteiro opcao = 0
+	logico validacao = falso
+		
+
+	enquanto(validacao == falso){
+		escreva("Em qual universo deseja embarcar? ")
+		leia(opcao)
+		se(opcao >= 5 e opcao <= 8){
+			escreva("Muito bem, você escolheu o seu destino!\n")
+			escreva("Vamos mergulhar nessa aventura!")
+			validacao = verdadeiro
+		}senao{
+			escreva("Você escolheu um universo ainda desconhecido!\n")
+			escreva("Que tal mergulharmos em uma das aventuras disponíveis?")
+			u.aguarde(5000)
+			limpa()
+		}	
+	}
+
+ 	u.aguarde(3000)
+ 	limpa()
+ 	
+	escreva("Entrando em um novo mundo ")
+	aguarde()
+	escolha(opcao){
+	caso 5:
+
+		//Imagem
+
+		musica("ResidentEvil.mp3")
+		escreva("\nBem vindo ao universo de Resident Evil!")
+		escreva("\n")
+		escreva("\n☢ Descrição: mergulhe em uma noite de terror em Raccoon City, onde os zumbis e criaturas grotescas dominam. Junte-se a Leon e Claire enquanto desvendam mistérios, enfrentam horrores e lutam pela sobrevivência em uma batalha de pura tensão e adrenalina!") 
+		escreva("\n")
+		escreva("\n")
+		escreva("Para embarcar junto de Leon e Claire, você só precisará de 20 coins. Mas corra! Temos apenas 3 ingressos no nosso estoque!")
+		escreva("\n")
+		carrinho()
+
+	pare
+	caso 6:
+
+		//Imagem
+
+		musica("Aladdin.mp3")
+		escreva("\nBem vindo ao universo de Aladdin!")
+		escreva("\n")
+		escreva("\n♔ Descrição: voe em um tapete mágico e viva uma aventura encantada nas ruas de Agrabah. Com a ajuda de um gênio travesso e sua astúcia, enfrente vilões e descubra tesouros enquanto busca conquistar o coração da princesa e mudar seu destino.") 
+		escreva("\n")
+		escreva("\n")
+		escreva("Para embarcar junto de Aladdin, você só precisará de 15 coins. Mas corra! Temos apenas 6 ingressos no nosso estoque!")
+		escreva("\n")
+		carrinho()
+	
+	pare
+	caso 7:
+
+		//Imagem
+
+		musica("Crash.mp3")
+		escreva("\nBem vindo ao universo de Crash!")
+		escreva("\n")
+		escreva("\nⒸ Descrição: Junte-se a Crash em uma jornada alucinante, cheia de saltos, corridas e explosões. Navegue por selvas, vulcões e labirintos, enquanto enfrenta vilões e coleta gemas para salvar o dia com estilo e muita diversão!") 
+		escreva("\n")
+		escreva("\n")
+		escreva("Para embarcar junto de Crash, você só precisará de 14 coins. Mas corra! Temos apenas 8 ingressos no nosso estoque!")
+		escreva("\n")
+		carrinho()
+	pare
+	caso 8:
+
+		//Imagem
+
+		musica("Castlevania.mp3")
+		escreva("\nBem vindo ao universo de Castlevania!")
+		escreva("\n")
+		escreva("\n♜ Descrição: enfrente as trevas em um castelo sinistro repleto de monstros e armadilhas. Armado com uma variedade de armas e coragem, derrote o Conde Drácula e seus seguidores, enquanto explora corredores góticos e desvenda segredos sombrios.") 
+		escreva("\n")
+		escreva("\n")
+		escreva("Para embarcar junto de Castlevania, você só precisará de 19 coins. Mas corra! Temos apenas 2 ingressos no nosso estoque!")
+		escreva("\n")
+		carrinho()	
+	pare
+	}
+	}
+	
+	funcao aguarde(){
+		para(inteiro i = 0; i < 20; i++){
+			u.aguarde(250)
+			escreva("█")
+			u.aguarde(250)
+		}
+	}
+
+	funcao desenhar(caracter textoVazio, cadeia textoDesenho, inteiro linha){
+		para(inteiro i = 0; i < linha; i++){
+			escreva(textoVazio)		
+		}
+		escreva(textoDesenho)		
+	}
+
+	funcao musica(cadeia mp3){
+		
+		inteiro som = s.carregar_som(mp3)
+		s.reproduzir_som(som, falso)
+		u.aguarde(7000)
+		s.interromper_som(som)
+	
+	}
+	
+	funcao carrinho(){
+
+	caracter opcaoCarrinho
+	
+	escreva("\nDeseja salvar alguns ingressos no seu carrinho? Digite 'S' para Sim e 'N' para Não: ")
+	leia(opcaoCarrinho)
+		
+		se(opcaoCarrinho == 'S' ou opcaoCarrinho == 's'){
+			escreva("Ótimo! Nos vemos em breve!")
+		}senao se(opcaoCarrinho == 'N' ou opcaoCarrinho == 'n'){
+			escreva("Que pena! Então vamos visitar outros universos!\n")
+			u.aguarde(1000)
+			menuCategorias()
+		}senao{
+			escreva("Entrada inválida!")
+			carrinho()
+		}
+			
+	
+	}
+	
 }
 
 /* $$$ Portugol Studio $$$ 
@@ -191,10 +414,10 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3634; 
- * @DOBRAMENTO-CODIGO = [30, 59, 183];
+ * @POSICAO-CURSOR = 10363; 
+ * @DOBRAMENTO-CODIGO = [31, 60];
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {usuario, 8, 8, 7};
+ * @SIMBOLOS-INSPECIONADOS = {usuario, 9, 8, 7};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
