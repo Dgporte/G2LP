@@ -25,6 +25,8 @@ programa
 	
 	funcao inicio()
 	{
+		logoPressStart()
+		logoLp()
 		menuLogin()
 	}
 	funcao menuLogin(){
@@ -127,7 +129,7 @@ programa
 	}
 	funcao menuCategorias(){
 	escreva(nomeUsuario,", aqui estão os universos disponíveis no nosso catálogo!")
-	u.aguarde(720)
+	u.aguarde(1020)
 	limpa()
 	aguardeMenos()
 
@@ -260,28 +262,28 @@ programa
 		caso 1:
 			
 			//Imagem
-			
+			escreva("Bem vindo ao universo do Mario Bros!\n\n")
+			logoMario()
 			musica("Mario.mp3")
-			escreva("Bem vindo ao universo do Mario Bros!")
+			escreva("\n\n")
+			escreva("\n★ Descrição: Acompanhe o encanador Mario Bros em sua jornada para resgatar a princesa Peach.\n Mas cuidado! O Browser está à espreita e pode atrapalhar essa aventura!") 
 			escreva("\n")
-			escreva("\n★ Descrição: Acompanhe o encanador Mario Bros em sua jornada para resgatar a princesa Peach. Mas cuidado! O Browser está à espreita e pode atrapalhar essa aventura!") 
 			escreva("\n")
-			escreva("\n")
-			escreva("Para embarcar junto com o Mario, você só precisará de 20 coins. Mas corra! Temos apenas 2 ingressos no nosso estoque!")
+			escreva("Para embarcar junto com o Mario, você só precisará de 20 coins. Mas corra! Temos apenas ", matrizCatalogo[0][4]," ingressos no nosso estoque!")
 			escreva("\n")
 			carrinho()	
 		pare
 		caso 2:
 	
 			//Imagem
-	
+			escreva("Bem vindo ao universo de Zelda!\n\n")
+			logoZelda()
 			musica("Zelda.mp3")
-			escreva("Bem vindo ao universo de Zelda!")
 			escreva("\n")
-			escreva("\n☡ Descrição: Junte-se a Link, o destemido herói, para desbravar reinos encantados, enfrentar monstros e desvendar enigmas para salvar a princesa Zelda e restaurar a paz em Hyrule.") 
+			escreva("\n☡ Descrição: Junte-se a Link, o destemido herói, para desbravar reinos encantados,\n enfrentar monstros e desvendar enigmas para salvar a princesa Zelda e restaurar a paz em Hyrule.") 
 			escreva("\n")
 			escreva("\n")
-			escreva("Para embarcar junto a Zelda, você só precisará de 18 coins. Mas corra! Temos apenas 5 ingressos no nosso estoque!")
+			escreva("Para embarcar junto a Zelda, você só precisará de 18 coins. Mas corra! Temos apenas ", matrizCatalogo[1][4]," ingressos no nosso estoque!")
 			escreva("\n")
 			carrinho()
 			
@@ -289,14 +291,14 @@ programa
 		caso 3:
 	
 			//Imagem
-	
+			escreva("Bem vindo ao universo de Donkey Kong!\n\n")
 			musica("DonkeyKong.mp3")
-			escreva("Bem vindo ao universo de Donkey Kong!")
+			logoDonkeyKong()
 			escreva("\n")
-			escreva("\nƊ Descrição: Junte-se a Donkey Kong, enfrente obstáculos e inimigos e o ajude a resgatar sua amada, enfrentando plataformas, rochas e barris pelo caminho. Prepare-se para um jogo repleto de ação, pulos e diversão!") 
+			escreva("\nƊ Descrição: Junte-se a Donkey Kong, enfrente obstáculos e inimigos e o ajude a resgatar sua amada, enfrentando plataformas, rochas e barris pelo caminho.\n Prepare-se para um jogo repleto de ação, pulos e diversão!") 
 			escreva("\n")
 			escreva("\n")
-			escreva("Para embarcar junto de Donkey Kong, você só precisará de 10 coins. Mas corra! Temos apenas 7 ingressos no nosso estoque!")
+			escreva("Para embarcar junto de Donkey Kong, você só precisará de 10 coins. Mas corra! Temos apenas ", matrizCatalogo[2][4]," ingressos no nosso estoque!")
 			escreva("\n")
 			carrinho()
 	
@@ -305,13 +307,14 @@ programa
 	
 			//Imagem
 	
+			escreva("Bem vindo ao universo de Pac-man!\n\n")
 			musica("Pacman.mp3")
-			escreva("Bem vindo ao universo de Pac-man!")
+			logoPacman()
 			escreva("\n")
-			escreva("\n⋯ Descrição: Junte-se a Pac-man em uma clássica corrida labiríntica para devorar pellets e frutas, enquanto foge de fantasmas famintos. Cuidado! Eles são rápidos!") 
+			escreva("\n⋯ Descrição: Junte-se a Pac-man em uma clássica corrida labiríntica para devorar pellets e frutas,\n enquanto foge de fantasmas famintos. Cuidado! Eles são rápidos!") 
 			escreva("\n")
 			escreva("\n")
-			escreva("Para embarcar junto de Pac-man, você só precisará de 12 coins. Mas corra! Temos apenas 9 ingressos no nosso estoque!")
+			escreva("Para embarcar junto de Pac-man, você só precisará de 12 coins. Mas corra! Temos apenas ", matrizCatalogo[3][4]," ingressos no nosso estoque!")
 			escreva("\n")
 			carrinho()
 	
@@ -328,11 +331,11 @@ programa
 		escreva("Em qual universo deseja embarcar? ")
 		leia(opcao)
 		se(opcao >= 5 e opcao <= 8){
-			escreva("Muito bem, você escolheu o seu destino!\n")
+			escreva("Muito bem, você escolheu o seu destino!\n\n")
 			escreva("Vamos mergulhar nessa aventura!")
 			validacao = verdadeiro
 		}senao{
-			escreva("Você escolheu um universo ainda desconhecido!\n")
+			escreva("Você escolheu um universo ainda desconhecido!\n\n")
 			escreva("Que tal mergulharmos em uma das aventuras disponíveis?")
 			u.aguarde(5000)
 			limpa()
@@ -350,14 +353,14 @@ programa
 		caso 5:
 	
 			//Imagem
-	
+			escreva("Bem vindo ao universo de Resident Evil!\n\n")
 			musica("ResidentEvil.mp3")
-			escreva("Bem vindo ao universo de Resident Evil!")
+			logoResidente()
 			escreva("\n")
-			escreva("\n☢ Descrição: mergulhe em uma noite de terror em Raccoon City, onde os zumbis e criaturas grotescas dominam. Junte-se a Leon e Claire enquanto desvendam mistérios, enfrentam horrores e lutam pela sobrevivência em uma batalha de pura tensão e adrenalina!") 
+			escreva("\n☢ Descrição: mergulhe em uma noite de terror em Raccoon City, onde os zumbis e criaturas grotescas dominam.\n Junte-se a Leon e Claire enquanto desvendam mistérios, enfrentam horrores e lutam pela sobrevivência em uma batalha de pura tensão e adrenalina!") 
 			escreva("\n")
 			escreva("\n")
-			escreva("Para embarcar junto de Leon e Claire, você só precisará de 20 coins. Mas corra! Temos apenas 3 ingressos no nosso estoque!")
+			escreva("Para embarcar junto de Leon e Claire, você só precisará de 20 coins. Mas corra! Temos apenas ", matrizCatalogo[4][4]," ingressos no nosso estoque!")
 			escreva("\n")
 			carrinho()
 	
@@ -366,13 +369,14 @@ programa
 	
 			//Imagem
 	
+			escreva("Bem vindo ao universo de Aladdin!\n\n")
 			musica("Aladdin.mp3")
-			escreva("Bem vindo ao universo de Aladdin!")
+			logoAladdin()
 			escreva("\n")
-			escreva("\n♔ Descrição: voe em um tapete mágico e viva uma aventura encantada nas ruas de Agrabah. Com a ajuda de um gênio travesso e sua astúcia, enfrente vilões e descubra tesouros enquanto busca conquistar o coração da princesa e mudar seu destino.") 
+			escreva("\n♔ Descrição: voe em um tapete mágico e viva uma aventura encantada nas ruas de Agrabah.\n Com a ajuda de um gênio travesso e sua astúcia, enfrente vilões e descubra tesouros enquanto busca conquistar o coração da princesa e mudar seu destino.") 
 			escreva("\n")
 			escreva("\n")
-			escreva("Para embarcar junto de Aladdin, você só precisará de 15 coins. Mas corra! Temos apenas 6 ingressos no nosso estoque!")
+			escreva("Para embarcar junto de Aladdin, você só precisará de 15 coins. Mas corra! Temos apenas ", matrizCatalogo[5][4]," ingressos no nosso estoque!")
 			escreva("\n")
 			carrinho()
 		
@@ -381,13 +385,14 @@ programa
 	
 			//Imagem
 	
+			escreva("Bem vindo ao universo de Crash!\n\n")
 			musica("Crash.mp3")
-			escreva("Bem vindo ao universo de Crash!")
+			logoCrash()
 			escreva("\n")
-			escreva("\n© Descrição: Junte-se a Crash em uma jornada alucinante, cheia de saltos, corridas e explosões. Navegue por selvas, vulcões e labirintos, enquanto enfrenta vilões e coleta gemas para salvar o dia com estilo e muita diversão!") 
+			escreva("\n© Descrição: Junte-se a Crash em uma jornada alucinante, cheia de saltos, corridas e explosões.\n Navegue por selvas, vulcões e labirintos, enquanto enfrenta vilões e coleta gemas para salvar o dia com estilo e muita diversão!") 
 			escreva("\n")
 			escreva("\n")
-			escreva("Para embarcar junto de Crash, você só precisará de 14 coins. Mas corra! Temos apenas 8 ingressos no nosso estoque!")
+			escreva("Para embarcar junto de Crash, você só precisará de 14 coins. Mas corra! Temos apenas ", matrizCatalogo[6][4]," ingressos no nosso estoque!")
 			escreva("\n")
 			carrinho()
 		pare
@@ -395,13 +400,14 @@ programa
 	
 			//Imagem
 	
+			escreva("Bem vindo ao universo de Castlevania!\n\n")
 			musica("Castlevania.mp3")
-			escreva("Bem vindo ao universo de Castlevania!")
+			logoCastlevania()
 			escreva("\n")
-			escreva("\n♜ Descrição: enfrente as trevas em um castelo sinistro repleto de monstros e armadilhas. Armado com uma variedade de armas e coragem, derrote o Conde Drácula e seus seguidores, enquanto explora corredores góticos e desvenda segredos sombrios.") 
+			escreva("\n♜ Descrição: enfrente as trevas em um castelo sinistro repleto de monstros e armadilhas.\n Armado com uma variedade de armas e coragem, derrote o Conde Drácula e seus seguidores, enquanto explora corredores góticos e desvenda segredos sombrios.") 
 			escreva("\n")
 			escreva("\n")
-			escreva("Para embarcar junto de Castlevania, você só precisará de 19 coins. Mas corra! Temos apenas 2 ingressos no nosso estoque!")
+			escreva("Para embarcar junto de Castlevania, você só precisará de 19 coins. Mas corra! Temos apenas ", matrizCatalogo[7][4]," ingressos no nosso estoque!")
 			escreva("\n")
 			carrinho()	
 		pare
@@ -469,10 +475,16 @@ programa
 	//Daqui em diante teremos nossas logos do trabalho.
 	funcao logoMario()
 	{
+<<<<<<< HEAD
+		
+		
+			escreva("\n\n", 
+=======
 		inteiro espaco = 10
 		para(inteiro i=0;i<=espaco;i++)
 		{
 			escreva( 
+>>>>>>> 23e94d87c0cb6c4ef2f08da82559dc4fcb610f1b
 		     "                     .=+*+=.                             \n", 
 			"                 ##############*                         \n",
 			"              +#####  #  .#  #####-                      \n",
@@ -495,6 +507,80 @@ programa
 			"           .     ..-@@@@@@@@@:..    ..                   \n",
 			"             .       .:::::.       .                     \n",
 			"                .       .       ..                       \n",
+<<<<<<< HEAD
+			"                   ..       .                            \n")
+			
+               
+		
+	}
+		funcao logoZelda()
+	{	
+		inteiro parada = 1
+		
+		para(inteiro i = 0; i < parada; i++)
+		{
+		 
+		  desenhar(' ', "  ..-'`       ````---.", 5)
+            escreva("\n")
+            desenhar(' ', "       .'          ___ .'````.'SS'.", 4)
+            escreva("\n")
+            desenhar(' ', "      /        ..-SS####'.  /SSHH##'.", 3)
+            escreva("\n")
+            desenhar(' ', "     |       .'SSSHHHH##|/#/#HH#H####'.", 2)
+            escreva("\n")
+            desenhar(' ', "    /      .'SSHHHHH####/||#/: \\SHH#####\\", 1)
+            escreva("\n")
+            desenhar(' ', "   /      /SSHHHHH#####/!||;`___|SSHH###\\", 0)
+            escreva("\n")
+            desenhar(' ', " -..__    /SSSHHH######.         \\SSSHH###\\", 0)
+            escreva("\n")
+            desenhar(' ', " `.'-.''--._SHHH#####.'           '.SH####/", 0)
+            escreva("\n")
+            desenhar(' ', "   '. ``'-  '/SH####`/_             `|H##/", 0)
+            escreva("\n")
+            desenhar(' ', "   | '.     /SSHH###|`'==.       .=='/\\H|", 0)
+            escreva("\n")
+            desenhar(' ', "   |   `'-.|SHHHH##/\\__\\/        /\\//|~|/", 0)
+            escreva("\n")
+            desenhar(' ', "   |    |S#|/HHH##/             |``  |", 0)
+            escreva("\n")
+            desenhar(' ', "   |    \\H' |H#.'`              \\    |", 0)
+            escreva("\n")
+            desenhar(' ', "   |        ''`|               -     /", 0)
+            escreva("\n")
+            desenhar(' ', "   |          /H\\          .----    /", 0)
+            escreva("\n")
+            desenhar(' ', "   |         |H#/'.           `    /", 0)
+            escreva("\n")
+            desenhar(' ', "   |          \\| | '..            /", 0)
+            escreva("\n")
+            desenhar(' ', "   |    ^~DLF   /|    ''..______.'.", 0)
+            escreva("\n")
+            desenhar(' ', "    \\          //\\__    _..-. | ", 0)
+            escreva("\n")
+            desenhar(' ', "     \\         ||   ````     \\ |_", 0)
+            escreva("\n")
+            desenhar(' ', "      \\    _.-|               \\| |_", 0)
+            escreva("\n")
+            desenhar(' ', "      _\\_.-'   `'''''-.        |   `--.", 0)
+            escreva("\n")
+            desenhar(' ', "  ''``    \\            `''-;    \\ /", 0)
+            escreva("\n")
+            desenhar(' ', "           \\      .-'|     ````.' -", 0)
+            escreva("\n")
+            desenhar(' ', "           |    .'  `--'''''-.. |/", 0)
+            escreva("\n")
+            desenhar(' ', "           |  .'               \\|", 0)
+            escreva("\n")
+            desenhar(' ', "           |.'", 0)
+            escreva("\n")
+		    
+		   
+		    
+		}
+	}
+
+=======
 			"                   ..       .                            \n",
 			"                                                           ")
                
@@ -762,7 +848,302 @@ funcao logoPacman()
        
 		}
 	}
+>>>>>>> 23e94d87c0cb6c4ef2f08da82559dc4fcb610f1b
 	
+	funcao logoDonkeyKong()
+	{
+		
+			escreva(    
+"::::+######*+-::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n",
+":-#%%%%@@@@@@%%+::::::::::::::::::::::::::::::::::::::::::::::::::::::\n",				                                           
+"%%%@#-:::-*%@@@%=::::::::::::::::::::::::::::::::::::::::::::::::::::: \n",
+"=%%*:::::::::-%@@#-:::::::::::::::::::::::::::::::::::::::::::::::::::\n",
+"::::::::::::::+@@%-:::::::::::::::::::::::::::::::::::::::::::::::::::\n",
+":::::::::::::-%@%%-::::-=:::::::::::::::::::::::::::::::::::::::::::::\n",
+":::::::::::::=@@@*:::::=+*:-+#%%#-::::::::::-=##########-:::::::::::::\n",
+":::::::::::::@@@@-=++-:-**+%@@@@@@#=::::::##########*##%##:::=*#####=:\n",
+"::::::::::::%@@@-::=*#=:+*#%@@@@@@@%*:::=#########*+=++*####%###%%%%%#\n",
+":::::::::::*@@@+-:::=#**+*##@@@@@*+*@=:-#############%%%%%%%%%%%%%%%%#\n",
+"::::::::::=@@@%=+**+--###++*++=+===#@*+++#@@@@@@@@%%@@@@@@@@@@@#*==-::\n",
+"::::::::::+@@%*::-####*****+++=++*@@#+**+=#%%%%=-----=*@+=+-::::::::::\n",
+"::::::::::#@@@+::::=###**#######@@@@#*###**%##*::--:::-----:::::::::::\n",
+"::::::::::#@@%+::=+**#######=:::+@@%%##****#%%#:-@@-:::=@#-:::::::::::\n",
+"::::::::::+@@%#--===::-*++-:::::=@@@%%#*+++#@%%+:+*:::--#+-:::::::::::\n",
+":::::::::::*@@%%=:::*##%@@%=::::*@%###%@#**+#*++========++**-:::::::::\n",
+"::::::::::::=@@%%%*@%%%@@@@@+*%%#######%%*+++++===========++*+-:::::::\n",
+":::::::::::---++=*@@@@@@@@@@@##########*#*++++++========+++++*+:::::::\n",
+":::::::::---=+*==+%@@#@@@@@@%#######**###%*+%@*++=====+++**++++=::::::\n",
+":::::::-=+##*##**#%%=-=+@@@@########-::++##*+#@@@@@@@@@@%%#+::::::::::\n",
+"::::::::=##+=+++***+=++#@@@@#######=#+:#####***%%%#%%%%%##%#-:::::::::\n",
+":::::::::**++++====+*##@@@@#**########*+######***#%%%%%%@@@%=:::::::::\n",
+"::::::::::####*******#@@@@##*++###############@@##**+*****+-::::::::::\n",
+"::::::::::+###########+:@%##*+==#############%@@@@#----:::::::::::::::\n",
+"::::::::::=***####%%%%%+:*##*++++*###########@@@@@+:::::::::::::::::::\n",
+":::::::::::+****#####***=-@##**+++*#########@@@@@@-:::::::::::::::::::\n",
+":::::::::::::=+++=-=****=:@@@###*****######@@@@@@%::::::::::::::::::::\n",
+":::::::::::::::::::::--:*@@@@@@@@###*=-:::@@@@@@@#::::::::::::::::::::\n",
+":::::::::::::::----+*###@@@@@@@@@@#:::::::@@@@@@%-::::::::::::::::::::\n",
+"::::::::::::::-**++++@@@@@@@@@@@@#-::::::%@@@@@%#:::::::::::::::::::::\n",
+":::::::::::::::+****+%@@@@@@@@@%-:::::::*@@@@%%@::::::::::::::::::::::\n",
+"::::::::::::::::::-#**#@@@@@+-::::::::::-@@@#%@@-:::::::::::::::::::::\n",
+"::::::::::::::::::*###*##*-::::::::::::::=***+*+::::::::::::::::::::::\n",
+"::::::::::::::::::+####*-:::::::::::::::+*+++++++-::::::::::::::::::::\n",
+":::::::::::::::::-***+:::::::::::::::::=*++===+++=-:::::::::::::::::::\n",
+"::::::::::::::::::-=-:::::::::::::::::=*+*++*+++++++=-::::::::::::::::\n",
+"::::::::::::::::::::::::::::::::::::+***+:**#*++*****+++=:::::::::::::\n",
+":::::::::::::::::::::::::::::::::::-**=:::++=:=**+****++=:::::::::::::\n",
+"::::::::::::::::::::::::::::::::::::::::::--::::--::::::::::::::::::::\n")
+       
+		
+	
+	}
+funcao logoPacman()
+	{
+		
+		
+			escreva(                                               
+"	      ##################                               \n",
+"          #########################                       \n",
+"        #############################                     \n",
+"      #################################                   \n",
+"    #####################################                 \n",
+"   #######################################                \n",
+"  #########################################               \n",
+" ###########################################              \n",
+"#############################################             \n",
+"#############################################             \n",
+"#############################################             \n",
+"##########+------=#########=------+##########             \n",
+"#########+--+@@%=--#######--=%@@+--=#########             \n",
+"#########---@@@@#--*#####*--#@@@@---#########             \n",
+"#########*--=%@*---#######---*@%=--+#########             \n",
+"###########------=#########+------###########             \n",
+"#############################################             \n",
+"#############################################             \n",
+"#############################################             \n",
+"#############################################             \n",
+"#############################################             \n",
+"#############################################             \n",
+"#############################################             \n",
+"#############################################             \n",
+"######   ############   ###########     #####             \n",
+"###         ######         ######         ###              \n")
+		     
+               
+      
+		
+	}
+		funcao logoResidente()
+	{
+		
+			escreva(                                               
+"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@         \n",
+"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@         \n",
+"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@         \n",
+"@@@@@@@@@@@@@@@ @#############@ @@@@@@@@@@@@@@@         \n",
+"@@@@@@@@@@@@@@  -@###########@-  @@@@@@@@@@@@@@         \n",
+"@@@@@@@@@@@@=    +@#########@=    =@@@@@@@@@@@@         \n",
+"@@@@@@@@@@#       @#########@       *@@@@@@@@@@         \n",
+"@@@@@@@@           @#######@           @@@@@@@@         \n",
+"@@@@@@%            .@#####@             %@@@@@@         \n",
+"@@@@@%##%@@=        =@###@-        =@@%##%@@@@@         \n",
+"@@@@@@#######@@@     %%#%%    .%@@#######@@@@@@         \n",
+"@@@@@@###########%@@+ @@@ +@@%###########@@@@@@         \n",
+"@@@@@@###############%@@@%###############@@@@@@         \n",
+"@@@@@@###########%@@+ @@@ +@@%###########@@@@@@         \n",
+"@@@@@@#######@@@     #%#%%     @@@#######@@@@@@         \n",
+"@@@@@%##%@@=        =@###@-        -@@%##%@@@@@         \n",
+"@@@@@@%             @#####@:            %@@@@@@         \n",
+"@@@@@@@@           @#######@           @@@@@@@@         \n",
+"@@@@@@@@@@#       @#########@       #@@@@@@@@@@         \n",
+"@@@@@@@@@@@@=    =@#########@+    =@@@@@@@@@@@@         \n",
+"@@@@@@@@@@@@@@  -@###########@-  @@@@@@@@@@@@@@         \n",
+"@@@@@@@@@@@@@@@ @#############@ @@@@@@@@@@@@@@@         \n",
+"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@         \n",
+"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@         \n")
+		     
+               
+       
+		
+	}
+	funcao logoAladdin()
+	{
+		
+			escreva(                                               
+"				          ======                       \n",
+"                                          =========+      \n",
+"                                          ==========      \n",
+"                                        =============     \n",
+"                                      ================    \n",
+"                                      =================   \n",
+"                                      ==================  \n",
+"                                     ==================+  \n",
+"                                    ===================== \n",
+"                       ++           ===================== \n",
+"                       ++            ==================== \n",
+"   =====              ++++                  ============= \n",
+" ========            +++***                    ========   \n",
+"====  ====         +++++****              ++   =====      \n",
+"===    =====      ======++++++     +++++++**** ==         \n",
+"===    +=+==============++++++++++++*******               \n",
+"=====+====+++++++=======++++************                  \n",
+"  ======   ++=++++++++++**************                    \n",
+"            ++++++++++++************                      \n",
+"             +++++++++++**********                        \n",
+"                ++++++++*******                           \n",
+"                     +++***                               \n",
+"                    ++++****                              \n")
+		     
+               
+       
+		
+	}
+	funcao logoCrash()
+	{
+		
+			escreva(                                               
+"				       #-     *+                                   \n",       
+"                                       =%#  +@#.                      \n",
+"                     -#*:           =: *@@@@@%*  ::                   \n",
+"                     .#####+.        %%*+*##@#*++.                    \n",
+"                      =#######-.  :  ::=--+**##*   ::                 \n",
+"                       *#######=:-##+-.     +*#=:#@*-.                \n",
+"                       .####***+*##*+.   =-  *##%***###:              \n",
+"                         *###**++***:  =*@+  +=      +:               \n",
+"                          :+++**++++:  :*+. .*=+#%.  :                \n",
+"     ####+**=*###+=.       =++=. ...=++++++*###*#-                    \n",
+"    -#%@%###########*+=:   +++.....  ...-===+*####*+=  @%@%           \n",
+"   .=*#*##%#########*+***+-*#=........    .....:---==*@@#+:           \n",
+"  .+*#+=*#**#@###@%##+=+***##*..:=   .................                \n",
+"   *##+*#*=+#**#@###%:  -***##=..=      ..------:::           ..      \n",
+"     *###*+##=*#####:     *****:            -=+=:         =*####+     \n",
+"        =####*####-        ##**=.               .=*+-.  =*####+.      \n",
+"            -=-.            #+++..              .=++==++==##**+=-.    \n",
+"                            +  ...............            :=**+=+=    \n",
+"                                .....--===-:                          \n",
+"                                     .-=-:                            \n")
+		     
+               
+        
+		
+	}
+	funcao logoCastlevania()
+	{
+		
+			escreva("                          \n",
+"                            #                    \n",
+"    *@@+             #    @@:                    \n",
+"     :@@%             @+  *@@%                   \n",
+"       :@@@=#@@:     %@@  @@@@+                  \n",
+"            *        @@@ :@@@@*                  \n",
+"                      @@.%@@@@+                  \n",
+"                =+    @   @@@@.                  \n",
+"                @@    :   .@@#                   \n",
+"               .@@-       @@@@.    :+            \n",
+"           :   @@@@      @@@@@@:   @@            \n",
+"           @   @@@@#    =@@@@@@:  =@@%           \n",
+"          =@   @@@@%:.  +@@@@@@+  @@@@           \n",
+"          @@%  @@@@      @@@@@@* *@@@@#          \n",
+"         *@@@  @@@@.    @@@@@@@= :@@@@=          \n",
+"         #@@@. @@@@@#+  @@@@@@@#  @@@@           \n",
+"          @@@ @@@@@@@@@@@@@@@@@@@@@@@@-  @=      \n",
+"          @@@%@@@@@@@@@@@@@@@@@@@@@@@@@#@@@=     \n",
+"      .-#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+   \n",
+"    *@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*  \n",
+"   #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  \n",
+"  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+#@=+@#   \n",
+"  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@     ..    \n",
+"  =.*@@@. @@@@@@@@@@@@@@@@@@@@@@@#@#.            \n",
+"      *%   @@@@@@@@@@@@@@@@@@                    \n",
+"             :--%@@@@@@@@+                       \n",
+"                  -:                             \n")
+
+       
+       
+		
+	}
+	funcao logoLp()
+{
+    inteiro espaco = 1
+    para(inteiro i = 1; i <= espaco; i++)
+    {
+        escreva(
+            "\t                                  \t \t.:+-.                                       \n", 
+            "\t                                                .-%+#+.                                           \n", 
+            "\t                                               .-#+@:                                             \n", 
+            "\t                                          .+###=::%=+@.                                           \n",
+            "\t                                       ..@=++++++++*@.                                            \n",
+            "\t             ...:-*%%%##%%%*-..        .@+#%..:+#*=..  ..-*%%%##%%%*=:...                         \n", 
+            "\t           ..*%=-+*=---=+*=::-##:..   ..#+@:        .:##-.:=*+=---=++-=%*:.                       \n", 
+            "\t         .+@-*+------------.*=-::@+=====@##@+======+@::-=*.------------=*-@*..                    \n",
+            "\t      ..*#=+------******-----:==-::::::::::::::::::::-=+:-----##*++#%=----++*#.                   \n",
+            "\t     .=%-+-------+*=++*@@-------=--------------------=-------#*++++++#=-----+=%=.                 \n",
+            "\t    .#+*---------%-+++%%#-------=--------------------=:------+@%++++#@#-------*+#.                \n",
+            "\t   .%=*---------+*=+++@@=-------:*=++++++++++++++++=+:--------%%#####@=--------*=%.               \n", 
+            "\t ..%=*---#%%%%%*=%*+%@%@%%%%%=---#-*-=#+---+###=--+-#--*%#*#@#--=+*+=--#%*+*@#--*=%.              \n", 
+            "\t .++*---*=+++++*@-#%%@:+++++@@+--#-*-=@*---+@--@*-+-*-#######+%-------#======-%=-*+*.             \n",
+            "\t..@-+---@-+++++#@@++%++++++#%%--:+=+-=@*---+@%@@=-+==-*@######@*------*@+====+@+-+-@.             \n",
+            "\t.:#*+--+@@@@@@%%%-*%-@@@@@@@@+--#+#=-=@@@@-+@-----=#=#-@%%%%%%@+-------@++##*+%+-=*#-.            \n",
+            "\t.++%=----====+@:+++%@========--++-+---====--=------+==+--*@@%+--=%@@@%=--*%@%+---=%+*.            \n", 
+            "\t.#*#+--------=#+++*@@---------++=#-%####%+--+%####%-#=++-------######**@---------+%+%.            \n",
+            "\t.%@*#--------%.+++%%#--------*+=#-=@@@@@@+--=@@@@@@+-#=+*------*@######@+--------##%@.            \n", 
+            "\t.#@=**------=@@@@@@@-------++=+*---+****=-----****+---++=+*----=@%@@@@%%+-------**=@%.            \n", 
+            "\t.++%+**=------======-----*++=*--======================--*==+*----+%@@@#=------=**+%=*.            \n",
+            "\t.:@:%=#+*+------------#*++=#--=#%::::::::::::::::::::%%=--#==+*#------------+*+*=%:@:.            \n",
+            "\t .%+:#*+*+++#####%#+++=+**--=##:+====================*:#%=--+*+==++#%#####+++*+*#:+@.             \n", 
+            "\t..@+-:*#=+**++==++**+=--=#%=:-=*=++++++++++++++++===*=-:-%#=--=+**++===+**+=##--+@..              \n", 
+            "\t   :%==--:*@#+------=*%@*::-==+=######################=+==--:+@%*=------=#@#:--=+%-               \n", 
+            "\t   .:%++==---:..::..::---==+==*%:                  ...%*+=+==---::..::..:---==++%:                \n", 
+            "\t     .+%+=+============+++=+*%-.                      .-%*+=++++==========++++%*..                \n",
+            "\t      ..-@#+=++==++++=++=*@#..                          ..*@*++==+++++++++=*@=.                   \n", 
+            "\t          .:*%@%###%%@%*-.                                  .:*%@%%###%@%*:.                      \n", 
+            "\t               ........                                          ........                         \n"
+        )
+        u.aguarde(3050)
+        limpa()
+    }
+    u.aguarde(250)
+}
+	funcao logoPressStart()
+	{
+		inteiro espaco = 3
+			para(inteiro i=1;i<=espaco;i++)
+			{
+	    escreva("   ######################   ######################     *#####################    #####################    ######################  \n", 
+	           "  ####==================+######==================-###  ###+==================*# ###==================-#  ###+==================+#  \n", 
+	           "  ####====================-####=====================*###-====================*###-===================-####+-===================+#  \n", 
+	           "  ####=======-*###=========####=======-*###+========*###========+################-========################+=======+##############  \n", 
+	           "  ####=======-*###========-####=======-*###+========*###-=======+################-========################+=======+############*   \n", 
+	           "  ####-======--===--======-####=======--===--====-######-======--======#     ####--======----------=*#####+-=====------------##    \n", 
+	           "  ####-================--+*####==================-######-=======-------#     ####++-========--------==####*+--======---------=+*#  \n", 
+	           "  ####--------::::::::::=######=--------:::-------######---------:::::-#     ######+------------------######+------------------+#  \n", 
+	           "  ####--------*########### ####=-------*###+-------=*###--------+######       ###############*--------#################--------+#  \n", 
+	           "  ####--------*#########   ####--------*###+--------*###--------+############# ##############+--------# ###############--------+#  \n", 
+	           "  ####--------*#           ####--------*###+--------*###---------------------*###---------------------####=--------------------+#  \n", 
+	           "  ####--------*#           ####--------*###+--------*#####=------------------####-------------------*#####=------------------####  \n", 
+	           "  ##############           ####################################################################################################    \n", 
+	           "  ############             #########################  ##############################################  #######################      \n", 
+	           "                                                                                                                                    \n", 
+	           "       #####################  #######################    ###################    #####################    #######################   \n", 
+	           "     ###-------------------####---------------------*# ###=----------------######-------------------*#####=--------------------+#  \n", 
+	           "   ###=--------------------####---------------------*###=-------------------=####---------------------####=--------------------+#  \n", 
+	           "  ####--------=+++++++++++*####*+++++---------+++++*####---------+++=--------####---------+++=--------#####+++++=--------+++++*##  \n", 
+	           "  ####--------*######################=-------=##########--------+###+--------####--------=###*--------##########*--------*######   \n", 
+	           "  ####--------*###########  #########=-------=####  ####---------+++---------####---------+++=-------=##########*--------*###*     \n", 
+	           "  ####------------------=###     ####+-------+#     ####---------------------####------------------=*##      ###*-------=*#        \n", 
+	           "  ######=------------------#     ####+-------+#     ####---------===---------####---------===------=*##      ###*-------=*#        \n", 
+	           "  ################========-#     ####+=======+#     ####-=======+###+=======-####-========###*=======-#      ###*-=======*#        \n", 
+	           "    ##############========-#     ####+=======+#     ####-=======+###+=======-####-========###*=======-#      ###*-=======*#        \n", 
+	           "   ###-====================#     ####+=======+#     ####========+###+========####=========###*=======-#      ###*-=======*#        \n", 
+	           "  ####===================*##     ####+=======+#     ####========+###+========####=========###*=======-#      ###*-=======*#        \n", 
+	           "  ####******************###      #####*******##     #####*******#####********####********#####********#      ####*******###        \n", 
+	           "  #######################        #############      ###################################################      #############         \n", 
+	           "   ####################           ##########         ##########   #########   #########*   #########          #########    \n")
+	   u.aguarde(3050)
+        limpa()  
+		}
+	u.aguarde(850)
+	}
 }
 
 /* $$$ Portugol Studio $$$ 
@@ -770,7 +1151,12 @@ funcao logoPacman()
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
+<<<<<<< HEAD
+ * @POSICAO-CURSOR = 17590; 
+ * @DOBRAMENTO-CODIGO = [436];
+=======
  * @POSICAO-CURSOR = 28962; 
+>>>>>>> 23e94d87c0cb6c4ef2f08da82559dc4fcb610f1b
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
