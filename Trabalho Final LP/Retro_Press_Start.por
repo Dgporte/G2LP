@@ -127,16 +127,18 @@ programa
 	}
 	funcao menuCategorias(){
 	escreva(nomeUsuario,", aqui estão os universos disponíveis no nosso catálogo!")
-	u.aguarde(3000)
+	u.aguarde(720)
 	limpa()
+	aguardeMenos()
 
 	escreva("Temos dois catálogos de Games:\n\n")
 	escreva("[1] - Jogos para Nintendo\n[2] - Jogos de Playstation 1\n[3] - Sair\n\n")
 	escreva("Utilize a 3º opção, caso queira sair deste menu!\n\n")
 	escreva("Escreva: ")
 	leia(escolhaCatalogo)
-	u.aguarde(1000)
+	u.aguarde(720)
 	limpa()
+	aguardeMenos()
 
 		escolha(escolhaCatalogo)
 		{
@@ -150,12 +152,25 @@ programa
 					}
 					escreva("\n")
 					cadeia resposta
-					escreva("Voce realmente gostou desses universos?\n\n[S] Sim e \n[N]\n\nEscreva: ")
+					escreva("Voce realmente gostou desses universos?\n\n[S] Sim\n[N] Não\n\nEscreva: ")
 					leia(resposta)
 					cadeia resposta_alta = t.caixa_alta(resposta)
 						se(resposta_alta !="S")
-						{
-						produtos1()
+						{	u.aguarde(720)
+							limpa()
+							aguardeMenos()
+							menuCategorias()
+						}
+						senao
+						{	u.aguarde(720)
+							limpa()
+							aguardeMenos()
+						para(inteiro i = 0; i < 4; i++)
+							{
+			            		escreva(matrizCatalogo[i][0]," - ","ID",": ", matrizCatalogo[i][1]," ",matrizCatalogo[i][2]," ",matrizCatalogo[i][3],"\n")
+							}
+							escreva("\n")
+							produtos1()
 						}
 				pare
 	
@@ -163,29 +178,43 @@ programa
 			
 			escreva("Ótima pedida! Segue nosso catálogo de universos Playstation:\n\n")
 			
-				para(inteiro i = 5; i < 8; i++)
+				para(inteiro i = 4; i <8; i++)
 				{
             		escreva(matrizCatalogo[i][0]," - ","ID",": ", matrizCatalogo[i][1]," ",matrizCatalogo[i][2]," ",matrizCatalogo[i][3],"\n")
 				}
 				escreva("\n")
-				produtos2()
+				cadeia resposta2
+					escreva("Voce realmente gostou desses universos?\n\n[S] Sim\n[N] Não\n\nEscreva: ")
+					leia(resposta2)
+					cadeia resposta_alta2 = t.caixa_alta(resposta2)
+						se(resposta_alta2 !="S")
+						{
+							u.aguarde(720)
+							limpa()
+							aguardeMenos()
+							menuCategorias()
+						}
+						senao
+						{
+							u.aguarde(720)
+							limpa()
+							aguardeMenos()
+							para(inteiro i = 4; i < 8; i++)
+							{
+			            		escreva(matrizCatalogo[i][0]," - ","ID",": ", matrizCatalogo[i][1]," ",matrizCatalogo[i][2]," ",matrizCatalogo[i][3],"\n")
+							}
+							escreva("\n")
+							produtos2()
+						}
+				
 			pare
 
 			caso '3':
 			
-			inteiro contadorLoading = 3
-			escreva("Carregando")
-			
-				para(inteiro i = 0; i<contadorLoading;i++)
-				{
-					escreva(".")
-					u.aguarde(500)
-				}
-			u.aguarde(200)
-			limpa()
 			escreva("Obrigado por ter visitado nossa loja! Até mais!")
-			u.aguarde(2000)
-			limpa()	
+			u.aguarde(720)
+			limpa()
+			aguardeMenos()
 			menuLogin()
 			
 			pare
@@ -194,6 +223,7 @@ programa
 			escreva("\tOpção incorreta! Tente novamente!\n\n\t\tOpções possíveis:\n\n[1] Games Nintendo\t[2] Games Playstation\t[3] Sair")
 			u.aguarde(3000)
 			limpa()
+			aguardeMenos()
 			menuCategorias()
 				
 			pare
@@ -385,6 +415,18 @@ programa
 			u.aguarde(250)
 		}
 	}
+	
+	funcao aguardeMenos(){
+		escreva("\nCarregando ficheiro [")
+		para(inteiro i = 0; i < 12; i++){
+			u.aguarde(250)
+			escreva("∎")
+			u.aguarde(250)
+		}
+		escreva("]")
+		u.aguarde(450)
+		limpa()
+	}
 
 	funcao desenhar(caracter textoVazio, cadeia textoDesenho, inteiro linha){
 		para(inteiro i = 0; i < linha; i++){
@@ -431,7 +473,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 39; 
+ * @POSICAO-CURSOR = 5724; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
