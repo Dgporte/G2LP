@@ -106,6 +106,9 @@ programa
 				escreva("Login bem sucedido.\n")
 				limpa()
 				escreva(nomeUsuario, ", Bem vindo a Retro Gamer")
+				u.aguarde(1500)
+				limpa()
+				menuCategorias()
 			}senao{
 				enquanto(valida1 == falso){
 				escreva("Usuário ou senha incorretos.\nTente novamente.")
@@ -117,7 +120,8 @@ programa
 	}
 	funcao menuCategorias(){
 
-		escreva("Aqui estão algumas opções de Catálogo de Games!")
+		
+		escreva(nomeUsuario,", Aqui estão algumas opções de Catálogo de Games!")
 		u.aguarde(1500)
 		limpa()
 
@@ -189,7 +193,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 911; 
+ * @POSICAO-CURSOR = 2876; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = {usuario, 8, 8, 7};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
