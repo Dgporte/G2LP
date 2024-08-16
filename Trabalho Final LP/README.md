@@ -29,5 +29,6 @@
 * Ana Luísa Lobo Fortuna - anafortuna
 * Diogo Portella -
 * Gabriel Bardasson -
+* Lucas Sarasa -
 * Renata Aguiar - 
 
