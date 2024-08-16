@@ -30,5 +30,5 @@
 * Diogo Portella -
 * Gabriel Bardasson -
 * Lucas Sarasa -
-* Renata Aguiar - 
+* Renata Aguiar - R3nataAguiar
 
