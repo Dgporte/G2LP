@@ -5,11 +5,10 @@ programa
 	inclua biblioteca Util--> u
 	inclua biblioteca Sons --> s
 	
-	caracter opcaoLogin, opcaoSair, alterarUsuario, opcaoSistema, opcaoRespostaAdmin, respostaAdmin 
-	cadeia usuario[7][2] = {{"lucas@email.com","12345"},{"ana@email.com","12345"},{"gabriel@email.com","12345"},{"renata@email.com","12345"},{"diogo@email.com","12345"},{"admin","admin123"},{" "," "}}
+	caracter opcaoLogin, opcaoSair
+	cadeia usuario[5][2] = {{"lucas@email.com","12345"},{"ana@email.com","12345"},{"gabriel@email.com","12345"},{"renata@email.com","12345"},{"diogo@email.com","12345"}}
 	
-	cadeia digitarUsuario, digitarSenha, nomeUsuario, usuarioAdicionado, usuarioSenha, cadeiaAdmin, usuarioCadeia
-	inteiro soma = 0, soma2 = 0, usuarioAlterado
+	cadeia digitarUsuario, digitarSenha, nomeUsuario
 	logico valida1 = falso
 
 	cadeia matrizCatalogo[8][5] = 
@@ -110,28 +109,7 @@ programa
 				para(inteiro i=0;i<5;i++){
 					se(digitarUsuario == usuario[i][0] e digitarSenha == usuario[i][1]){
 						valida1 = verdadeiro
-					}se(digitarUsuario == "admin" e digitarSenha == "admin123"){
-						valida1 = verdadeiro
-						escreva("Você deseja alterar algo no sistema?\n[S] - Sim\n[N] - Não\nDigite aqui: ")
-						leia(alterarUsuario)
-						limpa()
-						escolha(alterarUsuario){
-						
-						caso 's':
-							mexerSistema()
-						pare
-						caso 'S':
-							mexerSistema()
-						pare
-						caso 'n':
-							escreva("Ok, tenha um ótimo dia!")
-						pare
-						caso 'N':
-							escreva("Ok, tenha um ótimo dia!")
-						pare
-					
 					}
-					pare
 				}
 				
 			se(valida1 == verdadeiro){
@@ -148,209 +126,7 @@ programa
 				login()
 				}
 			}
-		}
 	}
-	funcao mexerSistema(){
-		escreva("[1] - Deletar usuário \n[2] - Alterar usuário existente\n[3] - Adicionar usuário novo\nDigite a opção: ")
-		leia(opcaoSistema)
-		limpa()
-		escolha(opcaoSistema) {
-			caso '1':
-				delet()
-			pare
-			caso '2':
-				alterarNovo()
-			pare
-			caso '3':
-				adicionarNovo()
-			pare
-			caso contrario:
-				escreva("Opção inválida, tenha um otimo dia!")
-			pare
-		}
-	}
-	funcao adicionarNovo() {
-		escreva("Você deseja alterar algum usuário?\n[S] - Sim\n[N] - Não\nDigite aqui: ")
-			leia(opcaoRespostaAdmin)
-			limpa()
-			escolha(opcaoRespostaAdmin) {
-				caso 's':
-				escreva("Atualmente esses são os usuarios cadastrados no sistema.\n\n")
-				escreva("[1] - ",usuario[0][0],"\n","[2] - ",usuario[1][0],"\n","[3] - ",usuario[2][0],"\n","[4] - ",usuario[3][0],"\n","[5] - ",usuario[4][0],"\n")
-				u.aguarde(3000)
-				limpa()
-				escreva("Digite o usuário que você deseja adicionar: ")
-				leia(usuarioAdicionado)
-				
-				usuario[6][0] = usuarioAdicionado
-				escreva("Digite sua senha que você deseja adicionar: ")
-				leia(usuarioSenha)
-				limpa()
-				//usuario[6][1] = usuarioAdicionado
-				escreva("[1] - ",usuario[0][0],"\n","[2] - ",usuario[1][0],"\n","[3] - ",usuario[2][0],"\n","[4] - ",usuario[3][0],"\n","[5] - ",usuario[4][0],"\n","[6] - ",usuarioAdicionado,"\n\n")
-				u.aguarde(3000)
-				limpa()
-				pare
-
-				caso 'S':
-				escreva("Atualmente esses são os usuarios cadastrados no sistema.\n\n")
-				escreva("[1] - ",usuario[0][0],"\n","[2] - ",usuario[1][0],"\n","[3] - ",usuario[2][0],"\n","[4] - ",usuario[3][0],"\n","[5] - ",usuario[4][0],"\n")
-				u.aguarde(3000)
-				limpa()
-				escreva("\nDigite o usuário que você deseja adicionar\n: ")
-				leia(usuarioAdicionado)
-				
-				usuario[6][0] = usuarioAdicionado
-				escreva("\nDigite sua senha que você deseja adicionar\n: ")
-				leia(usuarioSenha)
-				limpa()
-				//usuario[6][1] = usuarioAdicionado
-				escreva("[1] - ",usuario[0][0],"\n","[2] - ",usuario[1][0],"\n","[3] - ",usuario[2][0],"\n","[4] - ",usuario[3][0],"\n","[5] - ",usuario[4][0],"\n","[6] - ",usuarioAdicionado,"\n\n")
-				u.aguarde(3000)
-				limpa()
-				pare
-
-				caso 'n':
-					escreva("Obrigado pelos seus serviços!")
-				pare
-				caso 'N':
-					escreva("Obrigado pelos seus serviços!")
-				pare
-				caso contrario:
-					escreva("Opção errada, tente novamente")
-				pare
-		}
-				alterarMais()
-	}
-	funcao delet(){
-		inteiro lista=0, respDelet, delet1=0
-		escreva("\nQuem você deseja deletar? \n\n")
-		para(inteiro i=0;i<5;i++){
-		soma += i
-			para(inteiro j=0;i<5;i++){
-			lista += j + 1
-		 	escreva("[",lista,"]",usuario[i][0],"\n")
-			}
-			pare
-		}
-		escreva("\nUsuário: ")
-		leia(respDelet)
-		limpa()
-		escolha(respDelet){
-			caso 1: //deletar Lucas
-			para(inteiro i=1;i<5;i++){
-			soma += i
-			para(inteiro j=0;i<5;i++){
-			delet1 += j + 1
-		 	escreva("[",delet1,"]",usuario[i][0],"\n")
-		 	pare
-			}
-			}
-			pare
-			
-			caso 2: //deletar Ana
-			para(inteiro i=0;i<5;i++){
-				se(i != 1){	
-				soma += i
-				para(inteiro j=0;i<5;i++){
-				delet1 += j + 1
-			 	escreva("[",delet1,"]",usuario[i][0],"\n")
-			 	pare
-				}
-				}
-			}
-			pare
-			caso 3: // deletar Gabriel
-			para(inteiro i=0;i<5;i++){
-				se(i!=2){
-				soma += i
-				para(inteiro j=0;i<5;i++){
-				delet1 += j + 1
-			 	escreva("[",delet1,"]",usuario[i][0],"\n")
-			 	pare
-				}
-				}
-			}
-			pare
-			caso 4: // deletar Renata
-			para(inteiro i=0;i<5;i++){
-				se(i!=3){
-				soma += i
-				para(inteiro j=0;j<5;j++){
-				delet1 += j + 1
-				escreva("[",delet1,"]",usuario[i][0],"\n")
-				pare
-				}
-				}
-			}
-			pare
-			caso 5: //deletar diogo
-			para(inteiro i=0;i<5;i++){
-				se(i!=4){
-				soma += i
-				para(inteiro j=0;j<5;j++){
-				delet1 += j + 1
-				escreva("[",delet1,"]",usuario[i][0],"\n")
-				pare
-				}
-				}
-			}
-		}
-			escreva("\nUsuário deletado com sucesso.\n")
-			u.aguarde(2500)
-			escreva("Aguarde")
-			para(inteiro i=0; i<3; i++) {
-			escreva(".")
-			u.aguarde(700)
-			}
-			limpa()
-			alterarMais()
-	}
-	funcao alterarNovo() {
-			//caracter opcaoRespostaAdmin
-
-	   	  escreva("Você deseja alterar algum usuário?\n[S] - Sim\n[N] - Não\nDigite aqui: ")
-	       leia(opcaoRespostaAdmin)
-	       limpa()
-	       escolha(opcaoRespostaAdmin) {
-	           caso 's':
-	           escreva("Atualmente esses são os usuarios cadastrados no sistema.\n\n")
-	           escreva("[1] - ",usuario[0][0],"\n","[2] - ",usuario[1][0],"\n","[3] - ",usuario[2][0],"\n","[4] - ",usuario[3][0],"\n","[5] - ",usuario[4][0],"\n")
-	           u.aguarde(3000)
-	           escreva("Digite o usuário que você deseja alterar: ")
-	           leia(usuarioAlterado)
-	           escreva("Digite sua alteração: ")
-	           leia(usuarioCadeia)
-
-			 escreva("Digite sua senha que você deseja adicionar: ")
-	           leia(usuarioSenha)
-	           limpa()
-				
-	           escolha(usuarioAlterado){
-	           	caso 1: // Lucas
-	           		usuario[0][0] = usuarioCadeia
-	           		escreva("[1] - ",usuarioCadeia,"\n","[2] - ",usuario[1][0],"\n","[3] - ",usuario[2][0],"\n","[4] - ",usuario[3][0],"\n","[5] - ",usuario[4][0],"\n")
-	           	pare
-	           	caso 2: // Ana
-	           		usuario[1][0] = usuarioCadeia
-	           		escreva("[1] - ",usuario[0][0],"\n","[2] - ",usuarioCadeia,"\n","[3] - ",usuario[2][0],"\n","[4] - ",usuario[3][0],"\n","[5] - ",usuario[4][0],"\n")
-	           	pare
-	           	caso 3: // Gabriel
-	           		usuario[2][0] = usuarioCadeia
-	           		escreva("[1] - ",usuario[0][0],"\n","[2] - ",usuario[1][0],"\n","[3] - ",usuarioCadeia,"\n","[4] - ",usuario[3][0],"\n","[5] - ",usuario[4][0],"\n")
-	           	pare
-	           	caso 4: // Renata
-	           		usuario[3][0] = usuarioCadeia
-	           		escreva("[1] - ",usuario[0][0],"\n","[2] - ",usuario[1][0],"\n","[3] - ",usuario[2][0],"\n","[4] - ",usuarioCadeia,"\n","[5] - ",usuario[4][0],"\n")
-	           	pare
-	           	caso 5: // Renata
-	           		usuario[4][0] = usuarioCadeia
-	           		escreva("[1] - ",usuario[0][0],"\n","[2] - ",usuario[1][0],"\n","[3] - ",usuario[2][0],"\n","[4] - ",usuario[3][0],"\n","[5] - ",usuarioCadeia,"\n")
-	           	pare
-	           }
-	 }
-	 			alterarMais()
-}
 	funcao menuCategorias(){
 	escreva(nomeUsuario,", aqui estão os universos disponíveis no nosso catálogo!")
 	u.aguarde(1020)
@@ -544,7 +320,8 @@ programa
 	
 		pare
 	}
-}
+	}
+
 	funcao produtos2(){
 	inteiro opcao = 0
 	logico validacao = falso
@@ -636,6 +413,7 @@ programa
 		pare
 	}
 	}
+	
 	funcao aguarde(){
 		para(inteiro i = 0; i < 20; i++){
 			u.aguarde(250)
@@ -643,6 +421,7 @@ programa
 			u.aguarde(250)
 		}
 	}
+	
 	funcao aguardeMenos(){
 		escreva("\nCarregando ficheiro [")
 		para(inteiro i = 0; i < 12; i++){
@@ -654,12 +433,14 @@ programa
 		u.aguarde(450)
 		limpa()
 	}
+
 	funcao desenhar(caracter textoVazio, cadeia textoDesenho, inteiro linha){
 		para(inteiro i = 0; i < linha; i++){
 			escreva(textoVazio)		
 		}
 		escreva(textoDesenho)		
 	}
+
 	funcao musica(cadeia mp3){
 		
 		inteiro som = s.carregar_som(mp3)
@@ -668,6 +449,7 @@ programa
 		s.interromper_som(som)
 	
 	}
+	
 	funcao carrinho(){
 
 	caracter opcaoCarrinho
@@ -689,6 +471,7 @@ programa
 			
 	
 	}
+
 	//Daqui em diante teremos nossas logos do trabalho.
 	funcao logoMario()
 	{
@@ -721,7 +504,7 @@ programa
                
 		
 	}
-	funcao logoZelda()
+		funcao logoZelda()
 	{	
 		inteiro parada = 1
 		
@@ -787,6 +570,7 @@ programa
 		    
 		}
 	}
+	
 	funcao logoDonkeyKong()
 	{
 		
@@ -834,7 +618,7 @@ programa
 		
 	
 	}
-	funcao logoPacman()
+funcao logoPacman()
 	{
 		
 		
@@ -870,7 +654,7 @@ programa
       
 		
 	}
-	funcao logoResidente()
+		funcao logoResidente()
 	{
 		
 			escreva(                                               
@@ -1081,35 +865,6 @@ programa
 		}
 	u.aguarde(850)
 	}
-	funcao alterarMais(){
-		caracter resposta
-		escreva("\nVocê deseja alterar algo mais no sistema?\n[S] - Sim\n[N] - Não\nDigite aqui: ")
-		leia(resposta)
-		u.aguarde(1000)
-		limpa()
-		escolha(resposta){
-			caso 'S':
-			mexerSistema()
-			pare
-			caso 's':
-			mexerSistema()
-			pare
-			caso 'N':
-			escreva("Saindo")
-			para(inteiro i=0; i<3; i++) {
-			escreva(".")
-			u.aguarde(700)
-			}
-			pare
-			caso 'n':
-			escreva("Saindo")
-			para(inteiro i=0; i<3; i++) {
-			escreva(".")
-			u.aguarde(700)
-			}
-			pare
-		}
-	}
 }
 
 /* $$$ Portugol Studio $$$ 
@@ -1117,8 +872,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 4028; 
- * @DOBRAMENTO-CODIGO = [26, 32, 152, 171, 224, 308, 353, 457, 574, 547, 638, 645, 656, 662, 670, 692, 723, 789, 836, 872, 905, 937, 966, 1001, 1043, 1083];
+ * @POSICAO-CURSOR = 19648; 
+ * @DOBRAMENTO-CODIGO = [436];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
