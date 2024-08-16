@@ -1,3 +1,33 @@
-Trabalho Final
+# Lógica de programação
 
-<h1>Deixar bonito o Readme<h1\>
+* Trabalho final de Lógica de Programação
+* Segue abaixo apresentação do sistema da loja de games **"Press Start"**
+
+# PRESS START - Grupo 2
+
+## 📑 Índice
+
+* Sobre o projeto
+* Tecnologias utilizadas
+* Fluxograma
+* Autores
+
+-------------------------------------------------------------------------
+
+## 📁 Sobre o projeto
+
+*
+*
+-------------------------------------------------------------------------
+
+## 🔁 Fluxograma
+
+
+-------------------------------------------------------------------------
+## 🧝 Autores
+
+* Ana Luísa Lobo Fortuna - anafortuna
+* Diogo Portella -
+* Gabriel Bardasson -
+* Renata Aguiar - 
+
