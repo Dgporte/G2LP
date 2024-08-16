@@ -36,6 +36,6 @@
 * Ana Luísa Lobo Fortuna - anafortuna
 * Diogo Portella -
 * Gabriel Bardasson -
-* Lucas Sarasa -
+* Lucas Sarasa - lucasarasa
 * Renata Aguiar - R3nataAguiar
 
