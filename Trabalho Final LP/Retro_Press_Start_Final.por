@@ -281,7 +281,7 @@ programa
 	funcao alterarNovo() {
 			//caracter opcaoRespostaAdmin
 
-	   	  escreva("Você deseja alterar algum usuário?\n[S] - Sim\n[N] - Não\nDigite aqui: ")
+	   	  escreva("Você deseja mesmo adicionar um novo usuário?\n[S] - Sim\n[N] - Não\nDigite aqui: ")
 	       leia(opcaoRespostaAdmin)
 	       limpa()
 	       escolha(opcaoRespostaAdmin) {
@@ -1263,9 +1263,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 9753; 
- * @DOBRAMENTO-CODIGO = [28, 44, 34, 76, 101, 60, 142, 161, 196, 280, 599, 606, 617, 623, 653, 631, 787, 811, 833, 864, 930, 977, 1013, 1046, 1078, 1107, 1142, 1184];
- * @PONTOS-DE-PARADA = 77;
+ * @POSICAO-CURSOR = 7531; 
+ * @DOBRAMENTO-CODIGO = [28, 44, 34, 76, 101, 161, 196, 325, 599, 606, 617, 653, 631, 787, 811, 833, 864, 930, 977, 1013, 1046, 1078, 1107, 1142, 1184];
+ * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
