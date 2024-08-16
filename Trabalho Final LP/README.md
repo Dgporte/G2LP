@@ -31,7 +31,7 @@ Nossas funcionalidades são:
 * Experiência imersiva: O usuário embarca nesse universo com uma música selecionada a dedo e uma logo divertida.
 * Decisão de compra: Ele escolhe se compra o jogo ou não, mas com toda certeza a escolha vai ser sim, pois são clássicos e envolventes, e também somos ótimos vendedores. 😆🤩
   
-                                                                  🍄☁️🍄                            
+   <div align="center"> 🍄☁️🍄 </div>                       
 
 
 -------------------------------------------------------------------------
