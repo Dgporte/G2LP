@@ -52,7 +52,7 @@ Nossas funcionalidades são:
 
 * Ana Luísa Lobo Fortuna - anafortuna
 * Diogo Portella -
-* Gabriel Bardasson -
+* Gabriel Bardasson - bardasson10
 * Lucas Sarasa - lucasarasa
 * Renata Aguiar - R3nataAguiar
 
