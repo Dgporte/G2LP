@@ -15,9 +15,25 @@
 -------------------------------------------------------------------------
 
 ## 📁 Sobre o projeto
+Nosso projeto consiste na criação de uma loja de jogos retrô, sendo eles clássicos da Nintendo e PlayStation.
+Temos como objetivo proporcionar uma experiência nostálgica para os amantes de jogos antigos,
+permitindo, assim, que eles revivam momentos felizes que tiveram na sua infância, com consoles que marcaram gerações.
 
-*
-*
+O objetivo do projeto:
+
+O projeto tem como objetivo desenvolver uma plataforma onde os usuários possam adquirir jogos de maneira simples e intuitiva.
+Para que o usuário consiga fazer sua compra, é necessário que ele possua um login e senha, garantindo uma boa experiência,
+já que nosso foco é que nosso comprador possa fazer a compra de maneira segura.
+
+Nossas funcionalidades são:
+* Login seguro: Acesso somente com a autenticação do usuário.
+* Seleção de clássicos da Nintendo e do PlayStation 1: O usuário escolhe entre duas listas de jogos icônicos.
+* Experiência imersiva: O usuário embarca nesse universo com uma música selecionada a dedo e uma logo divertida.
+* Decisão de compra: Ele escolhe se compra o jogo ou não, mas com toda certeza a escolha vai ser sim, pois são clássicos e envolventes, e também somos ótimos vendedores. 😆🤩
+  
+   🏰🍄☁️🍄  🧝🗡️🏹🛡️  🐒🍌🍌🦍  🦇🌕🗡️🧛‍♂️                               🎮🕹️👾                                🦊🌪️💥🌴  🧞🐪🧞‍♀️🪔  👾👻⍩⃝🟡 ☢️☢🧬🧟‍♂️
+
+
 -------------------------------------------------------------------------
 
 ## 👩🏻‍💻 Tecnologias utilizadas
