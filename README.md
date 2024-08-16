@@ -44,7 +44,7 @@ Nossas funcionalidades são:
 -------------------------------------------------------------------------
 
 ## 🔁 Fluxograma
-![Logo](https://drive.google.com/file/d/12HaJEPT-ERij5VDiQgtBAv3Gjbbvzkey/view?usp=drive_link)
+![Logo](https://github.com/Dgporte/G2LP/blob/main/Trabalho%20Final%20LP/Fluxograma_Trabalho%20final-2GP.drawio.png)
 
 
 -------------------------------------------------------------------------
