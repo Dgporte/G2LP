@@ -133,9 +133,10 @@ programa
 					}
 					pare
 				}
+			}
 				
 			se(valida1 == verdadeiro){
-				escreva("Login bem sucedido.\n")
+				escreva("\nLogin bem sucedido.\n")
 				escreva("Olá ", nomeUsuario, ", vamos conhecer universos e embarcar em novas aventuras!")
 				u.aguarde(3000)
 				limpa()
@@ -148,7 +149,6 @@ programa
 				login()
 				}
 			}
-		}
 	}
 	funcao mexerSistema(){
 		escreva("[1] - Deletar usuário \n[2] - Alterar usuário existente\n[3] - Adicionar usuário novo\nDigite a opção: ")
@@ -1099,6 +1099,7 @@ programa
 			para(inteiro i=0; i<3; i++) {
 			escreva(".")
 			u.aguarde(700)
+			limpa()
 			}
 			pare
 			caso 'n':
@@ -1106,6 +1107,7 @@ programa
 			para(inteiro i=0; i<3; i++) {
 			escreva(".")
 			u.aguarde(700)
+			limpa()
 			}
 			pare
 		}
@@ -1117,8 +1119,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 4028; 
- * @DOBRAMENTO-CODIGO = [26, 32, 152, 171, 224, 308, 353, 457, 574, 547, 638, 645, 656, 662, 670, 692, 723, 789, 836, 872, 905, 937, 966, 1001, 1043, 1083];
+ * @POSICAO-CURSOR = 44409; 
+ * @DOBRAMENTO-CODIGO = [26, 32, 152, 171, 224, 308, 353, 457, 574, 547, 638, 645, 656, 662, 670, 692, 723, 789, 836, 872, 905, 937, 966, 1001, 1043];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
