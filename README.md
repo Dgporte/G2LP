@@ -52,9 +52,9 @@ Nossas funcionalidades são:
 
 ## 🧝 Autores
 
-* Ana Luísa Lobo Fortuna - anafortuna
-* Diogo Portella - Dgporte
-* Gabriel Bardasson - bardasson10
-* Lucas Sarasa - lucasarasa
-* Renata Aguiar - R3nataAguiar
+* Ana Luísa Lobo Fortuna - [https://github.com/anafortuna]🐺
+* Diogo Portella - Dgporte [https://github.com/Dgporte]💢
+* Gabriel Bardasson - bardasson10 [https://github.com/bardasson10]🧙‍♂️
+* Lucas Sarasa - lucasarasa [https://github.com/lucasarasa]🌭
+* Renata Aguiar - R3nataAguiar [https://github.com/R3nataAguiar]🐈‍⬛
 
