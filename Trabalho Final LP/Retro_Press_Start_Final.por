@@ -34,21 +34,17 @@ programa
 	}
 	funcao menuLogin(){
 		escreva("\t     ¦─ ⚄ Olá, seja bem vindo(a) à Press Start! ♞ ─¦\n")
+		cadeia rOpcaoLogin
+		cadeia rOpcaoLoginAlta
 		escreva("\n\t\t\t Deseja entrar na loja?\n\n[S] - Sim\n[N] - Não\n\nEscreva: ")
-		leia(opcaoLogin)
+		leia(rOpcaoLogin)
+		rOpcaoLoginAlta = t.caixa_alta(rOpcaoLogin)
+		opcaoLogin = tp.cadeia_para_caracter(rOpcaoLoginAlta)
 		limpa()
 		
 		escolha(opcaoLogin){
-			//caso o usuário informe a opcao SIM
-			caso 's':
-				login() //função login
-			pare
 			caso 'S':
 				login() //função login
-			pare
-			//caso o usuário informe a opcao NÃO
-			caso 'n':
-			escreva("Volte sempre que desejar!\n")
 			pare
 			caso 'N':
 			escreva("Volte sempre que desejar!\n")
@@ -71,23 +67,17 @@ programa
 			escreva("Informe a senha: ")
 			leia(digitarSenha)
 			limpa()
+			cadeia rOpcaoSair
+			cadeia rOpcaoSairAlta
 			escreva("Deseja efetuar o login? \n[S] - Sim\n[N] - Não\nEscreva: ")
-			leia(opcaoSair)
+			leia(rOpcaoSair)
+			rOpcaoSairAlta = t.caixa_alta(rOpcaoSair)
+			opcaoSair = tp.cadeia_para_caracter(rOpcaoSairAlta)
 			limpa()
 			escolha(opcaoSair) { // check
-				caso 's':
-					escreva("Entrando na conta\n")
-					u.aguarde(1000)
-				pare
 				caso 'S':
 					escreva("Entrando na conta\n")
 					u.aguarde(1000)
-				pare
-				caso 'n':
-					escreva("Usuário desconectado!\n")
-					u.aguarde(3000)
-					limpa()
-					menuLogin()
 				pare
 				caso 'N':
 					escreva("Usuário desconectado!\n")
@@ -114,19 +104,17 @@ programa
 						valida1 = verdadeiro
 					}se(digitarUsuario == "admin" e digitarSenha == "admin123"){
 						valida1 = verdadeiro
+						cadeia rAlterarUsuario
+						cadeia rAlterarUsuarioAlta
 						escreva("Você deseja alterar algo no sistema?\n[S] - Sim\n[N] - Não\nDigite aqui: ")
-						leia(alterarUsuario)
+						leia(rAlterarUsuario)
+						rAlterarUsuarioAlta = t.caixa_alta(rAlterarUsuario)
+						alterarUsuario = tp.cadeia_para_caracter(rAlterarUsuarioAlta)
 						limpa()
 						escolha(alterarUsuario){
 						
-						caso 's':
-							mexerSistema()
-						pare
 						caso 'S':
 							mexerSistema()
-						pare
-						caso 'n':
-							escreva("Ok, tenha um ótimo dia!")
 						pare
 						caso 'N':
 							escreva("Ok, tenha um ótimo dia!")
@@ -172,28 +160,14 @@ programa
 		}
 	}
 	funcao adicionarNovo() {
+		cadeia ropcaoRespostaAdmin
+		cadeia ropcaoRespostaAdminAlta
 		escreva("Você deseja alterar algum usuário?\n[S] - Sim\n[N] - Não\nDigite aqui: ")
-			leia(opcaoRespostaAdmin)
+			leia(ropcaoRespostaAdmin)
+			ropcaoRespostaAdminAlta = t.caixa_alta(ropcaoRespostaAdmin)
+			opcaoRespostaAdmin = tp.cadeia_para_caracter(ropcaoRespostaAdminAlta)
 			limpa()
 			escolha(opcaoRespostaAdmin) {
-				caso 's':
-				escreva("Atualmente esses são os usuarios cadastrados no sistema.\n\n")
-				escreva("[1] - ",usuario[0][0],"\n","[2] - ",usuario[1][0],"\n","[3] - ",usuario[2][0],"\n","[4] - ",usuario[3][0],"\n","[5] - ",usuario[4][0],"\n")
-				u.aguarde(3000)
-				limpa()
-				escreva("Digite o usuário que você deseja adicionar: ")
-				leia(usuarioAdicionado)
-				
-				usuario[6][0] = usuarioAdicionado
-				escreva("Digite sua senha que você deseja adicionar: ")
-				leia(usuarioSenha)
-				limpa()
-				//usuario[6][1] = usuarioAdicionado
-				escreva("[1] - ",usuario[0][0],"\n","[2] - ",usuario[1][0],"\n","[3] - ",usuario[2][0],"\n","[4] - ",usuario[3][0],"\n","[5] - ",usuario[4][0],"\n","[6] - ",usuarioAdicionado,"\n\n")
-				u.aguarde(3000)
-				limpa()
-				pare
-
 				caso 'S':
 				escreva("Atualmente esses são os usuarios cadastrados no sistema.\n\n")
 				escreva("[1] - ",usuario[0][0],"\n","[2] - ",usuario[1][0],"\n","[3] - ",usuario[2][0],"\n","[4] - ",usuario[3][0],"\n","[5] - ",usuario[4][0],"\n")
@@ -210,10 +184,6 @@ programa
 				escreva("[1] - ",usuario[0][0],"\n","[2] - ",usuario[1][0],"\n","[3] - ",usuario[2][0],"\n","[4] - ",usuario[3][0],"\n","[5] - ",usuario[4][0],"\n","[6] - ",usuarioAdicionado,"\n\n")
 				u.aguarde(3000)
 				limpa()
-				pare
-
-				caso 'n':
-					escreva("Obrigado pelos seus serviços!")
 				pare
 				caso 'N':
 					escreva("Obrigado pelos seus serviços!")
@@ -355,7 +325,7 @@ programa
 }
 	funcao menuCategorias(){
 		escreva(nomeUsuario,", aqui estão os universos disponíveis no nosso catálogo!")
-		u.aguarde(3000)
+		u.aguarde(3700)
 		limpa()
 		aguardeMenos()
 	
@@ -1293,9 +1263,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 15515; 
- * @DOBRAMENTO-CODIGO = [28, 154, 173, 226, 310, 629, 636, 647, 653, 683, 661, 817, 841, 863, 894, 960, 1007, 1043, 1076, 1108, 1137, 1172, 1214, 1255];
- * @PONTOS-DE-PARADA = ;
+ * @POSICAO-CURSOR = 9753; 
+ * @DOBRAMENTO-CODIGO = [28, 44, 34, 76, 101, 60, 142, 161, 196, 280, 599, 606, 617, 623, 653, 631, 787, 811, 833, 864, 930, 977, 1013, 1046, 1078, 1107, 1142, 1184];
+ * @PONTOS-DE-PARADA = 77;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
