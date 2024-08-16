@@ -51,7 +51,7 @@ Nossas funcionalidades são:
 ## 🧝 Autores
 
 * Ana Luísa Lobo Fortuna - anafortuna
-* Diogo Portella -
+* Diogo Portella - Dgporte
 * Gabriel Bardasson - bardasson10
 * Lucas Sarasa - lucasarasa
 * Renata Aguiar - R3nataAguiar
