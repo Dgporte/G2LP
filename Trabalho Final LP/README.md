@@ -43,6 +43,7 @@ Nossas funcionalidades são:
 -------------------------------------------------------------------------
 
 ## 🔁 Fluxograma
+![Logo](https://private-user-images.githubusercontent.com/155119396/358700599-9af4db49-b3fd-4b1d-b1b0-de406c622b58.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjM4Mzg0MjUsIm5iZiI6MTcyMzgzODEyNSwicGF0aCI6Ii8xNTUxMTkzOTYvMzU4NzAwNTk5LTlhZjRkYjQ5LWIzZmQtNGIxZC1iMWIwLWRlNDA2YzYyMmI1OC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwODE2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDgxNlQxOTU1MjVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01NjZhNDZkODliMzllM2QyM2EzMGE3MzUxNzk4OGNiZjU4YWQ5N2I0MWI4MWY0NzY4ZmZlNTc4NWY2NDA4MTM0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.bvbGTH_tTePFm5mawC5wqK00SgyXbFeiICbSlr7Kziw)
 
 
 -------------------------------------------------------------------------
